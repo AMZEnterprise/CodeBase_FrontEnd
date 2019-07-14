@@ -1,0 +1,28 @@
+Security :
+OS : Linux
+Panel : C-Panel
+
+
+Update wordpress all the time.
+Don't use null/free tepmlates and plugins.
+Use SSL on the server
+Use secure and long username and passwords.
+
+
+
+Secure the company:
+- get money from the workers to not hacking the data
+- use secure connections
+- use different level of authentication for users
+
+
+Secure Wordpress :
+- Use "User role editor" plugin for changing use role types and options
+- Use "Akismet" pulgin for spam filtering
+- Use comments captcha plugind to stop robots from commenting.
+- Use "All in one wordpress security" plugin for security purposes
+- Use "BackupBuddy" plugin for backup our website
+- Hide wordpress special files
+- Secure wordpress login form
+- Disable indexing of pages
+- Diable XMLRPC access

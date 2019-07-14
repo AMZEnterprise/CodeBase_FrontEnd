@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /*
+            if (flex-flow : row) -> the main axis is horizontal and the cross axis is vertical
+            if (flex-flow : column) -> the main axis is vertical and the cross axis is horizontal
+        */
+        div {
+            padding: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-direction: row; */
+            /* flex-flow: row-reverse; */
+            width: 250px;
+            flex-wrap: wrap-reverse;
+            /* justify-content: space-between; */
+        }
+
+        .flex-item {
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Flex Container</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <h3>One</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Two</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Three</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Four</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Five</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Six</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Seven</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Eight</h3>
+        </div>
+    </div>
+</body>
+
+</html>

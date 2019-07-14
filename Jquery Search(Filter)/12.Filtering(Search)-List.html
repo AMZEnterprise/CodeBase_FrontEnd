@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="files/jquery-3.3.1.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(54, 52, 52);
+        }
+        input[type="text"]{
+            width: 100%;
+            font-size: 20px;
+            padding: 10px 0; 
+        }
+        #list{
+            list-style-type: none;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 100px;
+            padding: 0;
+            background-color: rgb(63, 62, 62);
+            color: white;
+        }
+        #list li{
+            padding: 10px;
+            border-bottom: 2px solid rgb(132, 0, 255);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <input type="text" id="search" placeholder="Search ...">
+    <ul id="list">
+        <li>Ali Momenzadeh</li>
+        <li>Mahdi Bagheri</li>
+        <li>Hasan Mohammadi</li>
+        <li>Mohammad Jafari</li>
+        <li>Amin Moradi</li>
+        <li>Mohsen Ebrahimi</li>
+        <li>Ali Shafezadeh</li>
+        <li>Hasan Ghazanfarpour</li>
+        <li>Mohmmad mahdi Janatian</li>
+        <li>Mohammad Kiani</li>
+        <li>Amir abas Janatian</li>
+        <li>Amirhosein Bagheri</li>
+        <li>Shahin Ebrahimi</li>
+        <li>Ehsan Jafari</li>
+    </ul>
+    <script>
+        //==================Filter==================
+        
+        $(function(){
+            var input ="";
+            $("#search").keyup(function(){
+                input = $("#search").val().trim().toLowerCase();
+
+                //Filtering
+                $("#list").filter(function(){
+                    let length = $("#list").children().length;
+                    let child = $("#list").children();
+                    for(let i=0;i < length;i++){
+                        let childText = child[i].innerText.toLowerCase();
+                        if(childText.indexOf(input) > -1){
+                            $("#list li").eq(i).show();
+                        }else{
+                            $("#list li").eq(i).hide();
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

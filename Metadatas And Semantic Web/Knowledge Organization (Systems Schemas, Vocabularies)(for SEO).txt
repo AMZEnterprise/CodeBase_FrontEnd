@@ -1,0 +1,107 @@
+Knowledge Organization Systems: Schemas, Vocabularies, and Ontologies
+---------------------------------------------------------------------
+Taxonomies or controlled vocabularies are structured collections of terms that can be used as metadata element values.
+They are parts of conceptual data schemas (conceptual data models) that map concepts and their relationships.
+
+
+---------------------------------------------------------------------
+FOAF :
+
+FOAF is a machine-readable ontology to describe people and their contact data, interests, and relationships with
+other people.
+
+ex:
+<foaf:Person>
+	<foaf:name>Thomas Davis</foaf:name>
+	<foaf:gender>Male</foaf:gender>
+	<foaf:title>Mr</foaf:title>
+	<foaf:givenname>Thomas</foaf:givenname>
+	<foaf:family_name>Davis</foaf:family_name>
+	<foaf:homepage rdf:resource="http://www.example.com"/>
+	<foaf:weblog rdf:resource="http://www.example.com/blog/"/>
+</foaf:Person>
+---------------------------------------------------------------------
+DOAC :
+
+FOAF properties can be considered as the semantic equivalents of personal characteristics and relationships
+described on Facebook, and DOAC properties are the semantic counterparts of LinkedIn features. The DOAC
+vocabulary not only provides classes and properties to describe professional capabilities but also reapplies FOAF
+properties from the foaf:Person domain, including doac:summary, doac:experience, doac:education, doac:skill,
+doac:reference, and doac:publication.
+
+ex : mixed example of FOAF and DOAC
+
+<foaf:Person>
+	<foaf:name>John Smith</foaf:name>
+	<foaf:mbox rdf:resource="mailto:john@jsmith.com" />
+	<foaf:homepage rdf:resource="http://www.jsmith.com" />
+	<doac:experience>
+		<doac:VolunterExperience>
+			<doac:title>CEO</doac:title>
+			<doac:organization>ABC Company</doac:organization>
+			<doac:start-date>2010-04-06</doac:start-date>
+			<doac:end-date>2011-09-18</doac:end-date>
+		</doac:VolunterExperience>
+	</doac:experience>
+	<doac:education>
+		<doac:Degree>
+			<doac:title>Information Management</doac:title>
+			<doac:organization>Nanyang Technological University</doac:organization>
+			<doac:start-date>2000-09-01</doac:start-date>
+			<doac:end-date>2005-06-15</doac:end-date>
+		</doac:Degree>
+	</doac:education>
+	<doac:skill>
+		<doac:LanguageSkill>
+			<doac:language>en</doac:language>
+			<doac:reads rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel" />
+			<doac:writes rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel" />
+			<doac:speaks rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel" />
+		</doac:LanguageSkill>
+	</doac:skill>
+</foaf:Person>
+---------------------------------------------------------------------
+Dublin Core:
+
+
+Dublin Core metadata is often used in (X)HTML document head sections (similar to general meta
+tags), in attributes of XHTML+RDFa documents, and in other files such as feed channels. It can be expressed using
+meta and link (X)HTML elements, RDFa, RDF/XML representation, and plain XML. The Dublin Core syntax is
+provided in the reference model defined by the Dublin Core Abstract Model specification.
+ defines the 15 fundamental elements of Dublin Core, including
+contributor, coverage, creator, date, description, format, identifier, language, publisher, relation, rights,
+source, subject, title, and type. If these elements are used exclusively, we are talking about Simple Dublin
+Core. The extended set of elements is a higher level of Dublin Core called Qualified Dublin Core, which provides
+more specific elements. In addition to the general rules of Simple Dublin Core, further rules apply for Qualified
+Dublin Core. Qualified Dublin Core properties can be not only the 15 Dublin Core elements but also other elements
+recommended by the Dublin Core Metadata Initiative or DCMI element refinements. Optionally, Qualified Dublin
+Core values might have associated encoding schemes, each of which is identified by a name. Element refinements are
+handled similarly to properties (element refinement name associated with a Dublin Core namespace)
+
+A Dublin Core Namespace Declaration:
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+
+Simple Dublin Core:
+<meta name="DC.Creator" content="John Smith" />
+
+Dublin Core Metadata with identifier:
+<dc:title>
+	Tutorials
+</dc:title>
+<dc:description>
+	HTML5 and CSS3 tutorials.
+</dc:description>
+<dc:publisher>
+	Dr. Leslie F. Sikos
+</dc:publisher>
+<dc:identifier>
+	http://www.lesliesikos.com/tutorials/
+</dc:identifier>
+
+
+
+Qualified Dublin Core: .......
+
+
+

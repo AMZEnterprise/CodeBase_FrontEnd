@@ -1,0 +1,4317 @@
+<div class="container">
+  <div class="link">
+    <div class="text">Home</div>
+  </div>
+  <div class="link">
+    <div class="text">Projects</div>
+  </div>
+  <div class="link">
+    <div class="text">Art</div>
+  </div>
+  <div class="link">
+    <div class="text">Social</div>
+  </div>
+  <div class="link">
+    <div class="text">Setup</div>
+  </div>
+  <div class="link">
+    <div class="text">Help</div>
+  </div>
+</div>
+
+
+html, body{
+   padding:0px;
+   margin:0px;
+   font-family: 'Raleway', sans-serif;
+   color:#FFF;
+   height:100%;
+}
+body{
+   background:rgba(0, 0, 0, 0.5); 
+}
+
+.container{
+   max-width:200px;
+   background:rgba(0, 0, 0, 0.75);
+   margin:40px auto;
+   padding:10px 0px 20px 0px;
+   border:1px solid #111;
+   border-radius:4px;
+   box-shadow:0px 4px 5px rgba(0, 0, 0, 0.75);
+}
+.link{
+   font-size:16px;
+   font-weight:300;
+   text-align:center;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+.link:after{
+   content: '';
+   position:absolute;
+   width:80%;
+   border-bottom:1px solid rgba(255, 255, 255, 0.5);
+   bottom:50%;
+   left:-100%;
+   transition-delay: all 0.5s;
+   transition: all 0.5s;
+}
+.link:hover:after,
+.link.hover:after{
+   left:100%;
+}
+.link .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+}
+.link:hover .text,
+.link.hover .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 0);
+   transform:translateY(0%) translateZ(0) scale(1.1);
+   font-weight:600;
+}
+
+//For Demo only
+var links = document.getElementsByClassName('link')
+for(var i = 0; i <= links.length; i++)
+   addClass(i)
+
+
+function addClass(id){
+   setTimeout(function(){
+      if(id > 0) links[id-1].classList.remove('hover')
+      links[id].classList.add('hover')
+   }, id*750) 
+}
+
+---------------------------------------------------------------------------------
+<div data-component="navbar">
+
+<nav class="navbar p-0 fixed-top">
+      <button class="navbar-toggler navbar-toggler-left rounded-0 border-0" type="button" data-toggle="collapse" data-target="#megamenu-dropdown" aria-controls="megamenu-dropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i><span class="ml-3">Advanced</span>
+      </button>
+  
+  <div><a class="navbar-brand px-1" href="#"><img src="http://kris.agentfire2.com/wp-content/mu-plugins/agentfire-shared-library/img/agentfire.svg" class="d-inline-block mt-1" alt="AgentFire Logo" height="40"></a>
+
+  <div class="right-links float-right mr-4">
+    <a href="#" class="home"><i class="fa fa-home mr-3"></i></a>
+    
+    <div class="d-inline dropdown rounded-0 mx-3">
+      <a class="dropdown-toggle" id="tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-wrench" aria-hidden="true"></i></a>
+      <div class="dropdown-menu dropdown-menu-right rounded-0 text-center" aria-labelledby="tools">
+        <a class="dropdown-item px-2" href="#">Recompile CSS</a>
+      </div>
+    </div> <!-- /.dropdown -->
+    
+    <div class="d-inline dropdown mr-3">
+      <a class="dropdown-toggle" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span>10</span><i class="fa fa-bell"></i></a>
+      <div class="dropdown-menu dropdown-menu-right rounded-0 pt-0" aria-labelledby="notifications">
+        <div class="list-group">
+          <div class="lg">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <h5 class="mb-1">Real Estate Marketing Automation: 6 Simple Systems</h5>
+              <p class="mb-0">17 October 2016 | 9:32 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">How to Generate Seller Leads For $0.88 Using...</h5>
+              <p class="mb-0">3 October 2016 | 9:58 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">AgentFire Re-Opens For Business. New Services,...</h5>
+              <p class="mb-0">20 September 2016 | 6:28 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">Real Estate Blogging 101: How To Get Better...</h5>
+              <p class="mb-0">7 September 2016 | 3:03 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">How To Get More Listings With Strategic...</h5>
+              <p class="mb-0">16 August 2016 | 8:26 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">How To Find Strategic Real Estate Partners as...</h5>
+              <p class="mb-0">9 August 2016 | 6:44 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">Top 10 Real Estate Marketing Tools</h5>
+              <p class="mb-0">2 August 2016 | 10:25 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">The Beginner Guide To Google Adwords For Real...</h5>
+              <p class="mb-0">27 July 2016 | 1:15 am</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">The Complete Guide To Hyper-Local SEO For Realtors</h5>
+              <p class="mb-0">19 July 2016 | 5:51 pm</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <h5 class="mb-1">How We Took Ed Eakin’s Real Estate Website...</h5>
+              <p class="mb-0">11 July 2016 | 6:19 pm</p>
+            </a>
+          </div> <!-- /.lg -->
+        </div> <!-- /.list group -->
+      </div> <!-- /.dropdown-menu -->
+    </div> <!-- /.dropdown -->
+    
+    <div class="d-inline dropdown mr-3">
+      <a class="dropdown-toggle" id="messages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-envelope"></i></a>
+      <div class="dropdown-menu dropdown-menu-right rounded-0 text-center" aria-labelledby="messages">
+        <a class="dropdown-item">There are no new messages</a>
+      </div> <!-- /.dropdown-menu -->
+  </div> <!-- /.dropdown -->
+    
+    
+    <div class="d-inline dropdown">
+      <a class="dropdown-toggle" id="messages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        <img src="http://1.gravatar.com/avatar/47db31bd2e0b161008607d84c74305b5?s=96&d=mm&r=g">
+      </a>
+      <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="messages">
+        <a class="dropdown-item" href="#">Edit my profile</a>
+        <a class="dropdown-item" href="#">Log Out</a>
+      </div> <!-- /.dropdown-menu -->
+    </div> <!-- /.dropdown -->
+    
+  </div> <!-- /.right-links -->
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="megamenu">
+        <div class="collapse navbar-collapse" id="megamenu-dropdown">
+        <div class="megamenu-links">
+      <div class="row">
+        <div class="col-md-3 px-0">
+          <a class="btn rounded-0 border-0 d-flex w-100 justify-content-between p-3 pl-5" data-toggle="collapse" href="#menuOne" aria-expanded="false" aria-controls="collapseExample" id="more">Slider Revolution
+            <i class="fa fa-minus float-right" aria-hidden="true"></i>
+            <i class="fa fa-plus float-right" aria-hidden="true"></i>
+          </a> <!-- button close -->
+          <div class="collapse" id="menuOne">
+            <div class="list-group border-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Slider Revolution</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Navigation Editor</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Add-Ons</a>
+            </div> <!-- /.list-group -->
+          </div><!-- /.collapse -->
+        </div> <!-- /.col-md-3 -->
+        
+        <div class="col-md-3 px-0">
+          <a class="btn rounded-0 border-0 d-flex w-100 justify-content-between p-3" data-toggle="collapse" href="#menuTwo" aria-expanded="false" aria-controls="collapseExample" id="more">Flyouts
+            <i class="fa fa-minus float-right" aria-hidden="true"></i>
+            <i class="fa fa-plus float-right" aria-hidden="true"></i>
+          </a> <!-- button close -->
+          <div class="collapse" id="menuTwo">
+            <div class="list-group border-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">All Flyouts</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Add new Flyout</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Re-Order</a>
+            </div> <!-- /.list-group -->
+          </div><!-- /.collapse -->
+        </div> <!-- /.col-md-3 -->
+        <div class="col-md-3 px-0">
+          <a class="btn rounded-0 border-0 d-flex w-100 justify-content-between p-3" data-toggle="collapse" href="#menuThree" aria-expanded="false" aria-controls="collapseExample" id="more">Cornerstone 
+            <i class="fa fa-minus float-right" aria-hidden="true"></i>
+            <i class="fa fa-plus float-right" aria-hidden="true"></i>
+          </a> <!-- button close -->
+          <div class="collapse" id="menuThree">
+            <div class="list-group border-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Cornerstone</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Cornerstone</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Cornerstone</a>
+            </div> <!-- /.list-group -->
+          </div><!-- /.collapse -->
+        </div> <!-- /.col-md-3 -->
+      </div> <!-- /.row -->
+          <div class="row">
+            <div class="col-md-3 px-0">
+          <a class="btn rounded-0 border-0 d-flex w-100 justify-content-between p-3 pl-5" data-toggle="collapse" href="#menuFour" aria-expanded="false" aria-controls="collapseExample" id="more">Ess. Grid
+            <i class="fa fa-minus float-right" aria-hidden="true"></i>
+            <i class="fa fa-plus float-right" aria-hidden="true"></i>
+          </a> <!-- button close -->
+          <div class="collapse" id="menuFour">
+            <div class="list-group border-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Essential Grid</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Item Skin Editor</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Meta Data Handling</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Search Settings</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Global Settings</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Import/Export</a>
+            </div> <!-- /.list-group -->
+          </div><!-- /.collapse -->
+        </div> <!-- /.col-md-3 -->
+            <div class="col-md-3 px-0">
+          <a class="btn rounded-0 border-0 d-flex w-100 justify-content-between p-3" data-toggle="collapse" href="#menuFive" aria-expanded="false" aria-controls="collapseExample" id="more">AgentFire CTA Plus
+            <i class="fa fa-minus float-right" aria-hidden="true"></i>
+            <i class="fa fa-plus float-right" aria-hidden="true"></i>
+          </a> <!-- button close -->
+          <div class="collapse" id="menuFive">
+            <div class="list-group border-0">
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Essential Grid</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Item Skin Editor</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Meta Data Handling</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Search Settings</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Global Settings</a>
+              <a href="#" class="list-group-item list-group-item-action border-0 pl-4 py-3">Import/Export</a>
+            </div> <!-- /.list-group -->
+          </div><!-- /.collapse -->
+        </div> <!-- /.col-md-3 -->
+          </div>
+    </div> <!-- /.megamenu-links -->
+      </div></div>
+</nav>
+</div> <!-- END TOP NAVBAR -->
+
+
+
+<div data-component="sidebar">
+  <div class="sidebar">
+  <ul class="list-group flex-column d-inline-block first-menu">
+    <li class="list-group-item pl-3 py-2">
+      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Reporting</span></i></a>
+      
+      <ul class="list-group flex-column d-inline-block submenu">
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Dashboard</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Home</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">My Sites</a>
+            </li>
+          </ul>
+          
+        </li> 
+        
+        <li class="list-group-item pl-4">
+          <a href="">SEO</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:113px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Titles & Metas</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Social</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">XML Sitemaps</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Advanced</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Tools</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Search Console</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Go Premium</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Manual</a>
+            </li>
+          </ul>
+        
+        </li>
+      </ul> <!-- /.submenu --> 
+    </li> <!-- /.list-group-item -->
+    
+    <li class="list-group-item pl-3 py-2">
+      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Content</span></i></a>
+      <ul class="list-group flex-column d-inline-block submenu">
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Posts</a>
+        
+        <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Posts</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+          <li class="list-group-item pl-4">
+              <a href="#">Categories</a>
+            </li>
+          <li class="list-group-item pl-4">
+              <a href="#">Tags</a>
+            </li>
+          </ul>
+        </li> <!-- end Posts -->
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Blog Assist</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:114px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Blog Post</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Feed Sources</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Feed Source</a>
+            </li>
+          </ul>
+        </li> <!-- end Blog Assist -->
+        
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Pages</a>
+        
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:166px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Pages</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+          </ul>
+        </li> <!-- end Pages -->
+        
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Area Content</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:220px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Cities</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New City</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">All Neighborhoods</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Neighborhood</a>
+            </li>
+          </ul>
+        </li> <!-- end Area Content -->
+        
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Manual Listings</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:272px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">View All Listings</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Listing</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Status</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Locations</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Property Types</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Import Listing</a>
+            </li>
+          </ul>
+        </li> <!-- end Manual Listings -->
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Testimonials</a>
+        
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:323px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">View All</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </li> <!-- end Testimonials -->
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Team Members</a>
+        
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:377px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Members</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Member</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Designations</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Specialties</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Areas</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">All Locations</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New Location</a>
+            </li>
+          </ul>
+        </li> <!-- end Team Members -->
+      
+      </ul> <!-- /.submenu -->
+    </li> <!-- /.list-group-item -->
+    
+    <li class="list-group-item pl-3 py-2">
+      <a href="#">
+        <i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Engagement</span></i>
+      </a>
+      <ul class="list-group flex-column d-inline-block submenu">
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Comments</a>
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Comments</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Forms</a>
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:114px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Forms</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">New Form</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">All Entries</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Gravity Forms</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Import/Export</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Gravity Forms Tutorials</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Home Valuation</a>
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:166px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">View All Leads</a>
+            </li>
+          </ul>
+        </li>
+      </ul> <!-- /.submenu -->
+    </li> <!-- /.list-group-item -->
+    
+    
+    <li class="list-group-item pl-3 py-2">
+      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Image Center</span></i></a>
+      
+      <ul class="list-group flex-column d-inline-block submenu">
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Media Library</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Media Library</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+          </ul>
+          
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Soliloquy Slider</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:114px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Sliders</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+          </ul>
+        
+        </li>
+      </ul>
+    </li>
+    
+    <li class="list-group-item pl-3 py-2">
+      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Settings</span></i></a>
+      <ul class="list-group flex-column d-inline-block submenu">
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Users</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">All Users</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Add New</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Your Profile</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">AgentFire Settings</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:114px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Home Valuation</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Testimonials</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Team Members</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Area Content</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Manual Listings</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Grids Settings</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:166px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Ess. Grid Search Settings</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Ess. Grid Global Settings</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Plugin Settings</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:220px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Soliloquy</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Flickr - Pick a Picture</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Google Analytics</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Google Maps</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">JackBox</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Media</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">No Page Comment</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Post Types Order</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Shortcode any widget</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">WP RSS Images</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">SNAP</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">WP Sitemap Page</a>
+            </li>
+          </ul>
+        
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">WordPress Settings</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:272px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">General</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Discussion</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Reading</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Re-Order</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:323px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Posts</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Pages</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Media Library</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Blog Assist</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Area Content</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Manual Listings</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Testimonials</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Team Members</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Flyouts</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Site Appearance</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:377px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Widgets</a>
+            </li>
+            <li class="list-group-item pl-4">
+              <a href="#">Menus</a>
+            </li>
+          </ul>
+        
+        </li>
+      </ul>
+    
+    </li>
+    
+    <li class="list-group-item pl-3 py-2">
+      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">Support</span></i></a>
+      <ul class="list-group flex-column d-inline-block submenu">
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Training</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Video Tutorials</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Tutorials</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:114px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Help Desk</a>
+            </li>
+          </ul>
+        
+        </li>
+        <li class="list-group-item pl-4">
+          <a href="#" class="">Ask a Question</a>
+          
+          <ul class="list-group flex-column d-inline-block sub-submenu">
+            <span class="arrow" style="top:166px;"></span>
+            <li class="list-group-item pl-4">
+              <a href="#">Send Support Request</a>
+            </li>
+          </ul>
+        
+        </li>
+      </ul>
+    
+    </li>
+    
+    
+  </ul> <!-- /.first-menu -->
+</div> <!-- /.sidebar -->
+</div>
+
+<div class="wp-content">
+  <div class="container-fluid">
+    CONTENT GOES HERE
+  </div>
+</div>
+
+// Custom utility classes
+$spacer: 5px;
+
+$padding-1: 5px;
+$padding-2: 15px;
+$padding-3: 25px;
+$padding-4: 35px;
+$padding-5: 45px;
+
+$spacer-1: $spacer * 1;
+$spacer-2: $spacer * 2;
+$spacer-3: $spacer * 3;
+$spacer-4: $spacer * 5;
+$spacer-5: $spacer * 7;
+
+.p-1 {
+	padding: $padding-1 !important;
+}
+
+.p-2 {
+	padding: $padding-2 !important;
+}
+
+.p-3 {
+	padding: $padding-3 !important;
+}
+
+.p-4 {
+	padding: $padding-4 !important;
+}
+
+.p-5 {
+	padding: $padding-5 !important;
+}
+
+//left
+.pl-1 {
+	padding-left: $padding-1 !important;
+}
+
+.pl-2 {
+	padding-left: $padding-2 !important;
+}
+
+.pl-3 {
+	padding-left: $padding-3 !important;
+}
+
+.pl-4 {
+	padding-left: $padding-4 !important;
+}
+
+.pl-5 {
+	padding-left: $padding-5 !important;
+}
+
+//right
+.pr-1 {
+	padding-right: $padding-1 !important;
+}
+
+.pr-2 {
+	padding-right: $padding-2 !important;
+}
+
+.pr-3 {
+	padding-right: $padding-3 !important;
+}
+
+.pr-4 {
+	padding-right: $padding-4 !important;
+}
+
+.pr-5 {
+	padding-right: $padding-5 !important;
+}
+
+//top
+.pt-1 {
+	padding-top: $padding-1 !important;
+}
+
+.pt-2 {
+	padding-top: $padding-2 !important;
+}
+
+.pt-3 {
+	padding-top: $padding-3 !important;
+}
+
+.pt-4 {
+	padding-top: $padding-4 !important;
+}
+
+.pt-5 {
+	padding-top: $padding-5 !important;
+}
+
+//bottom
+.pb-1 {
+	padding-bottom: $padding-1 !important;
+}
+
+.pb-2 {
+	padding-bottom: $padding-2 !important;
+}
+
+.pb-3 {
+	padding-bottom: $padding-3 !important;
+}
+
+.pb-4 {
+	padding-bottom: $padding-4 !important;
+}
+
+.pb-5 {
+	padding-bottom: $padding-5 !important;
+}
+
+//left & right 
+.px-1 {
+	padding-left: $padding-1 !important;
+	padding-right: $padding-1 !important;
+}
+
+.px-2 {
+	padding-left: $padding-2 !important;
+	padding-right: $padding-2 !important;
+}
+
+.px-3 {
+	padding-left: $padding-3 !important;
+	padding-right: $padding-3 !important;
+}
+
+.px-4 {
+	padding-left: $padding-4 !important;
+	padding-right: $padding-4 !important;
+}
+
+.px-5 {
+	padding-left: $padding-5 !important;
+	padding-right: $padding-5 !important;
+}
+
+//top & bottom
+.py-1 {
+	padding-top: $padding-1 !important;
+	padding-bottom: $padding-1 !important;
+}
+
+.py-2 {
+	padding-top: $padding-2 !important;
+	padding-bottom: $padding-2 !important;
+}
+
+.py-3 {
+	padding-top: $padding-3 !important;
+	padding-bottom: $padding-3 !important;
+}
+
+.py-4 {
+	padding-top: $padding-4 !important;
+	padding-bottom: $padding-4 !important;
+}
+
+.py-5 {
+	padding-top: $padding-5 !important;
+	padding-bottom: $padding-5 !important;
+}
+
+.m-1 {
+	margin: $spacer-1 !important;
+}
+
+.m-2 {
+	margin: $spacer-2 !important;
+}
+
+.m-3 {
+	margin: $spacer-3 !important;
+}
+
+.m-4 {
+	margin: $spacer-4 !important;
+}
+
+.m-5 {
+	margin: $spacer-5 !important;
+}
+
+//left 
+.ml-1 {
+	margin-left: $spacer-1 !important;
+}
+
+.ml-2 {
+	margin-left: $spacer-2 !important;
+}
+
+.ml-3 {
+	margin-left: $spacer-3 !important;
+}
+
+.ml-4 {
+	margin-left: $spacer-4 !important;
+}
+
+.ml-5 {
+	margin-left: $spacer-5 !important;
+}
+
+//right
+.mr-1 {
+	margin-right: $spacer-1 !important;
+}
+
+.mr-2 {
+	margin-right: $spacer-2 !important;
+}
+
+.mr-3 {
+	margin-right: $spacer-3 !important;
+}
+
+.mr-4 {
+	margin-right: $spacer-4 !important;
+}
+
+.mr-5 {
+	margin-right: $spacer-5 !important;
+}
+
+//top
+.mt-1 {
+	margin-top: $spacer-1 !important;
+}
+
+.mt-2 {
+	margin-top: $spacer-2 !important;
+}
+
+.mt-3 {
+	margin-top: $spacer-3 !important;
+}
+
+.mt-4 {
+	margin-top: $spacer-4 !important;
+}
+
+.mt-5 {
+	margin-top: $spacer-5 !important;
+}
+
+//bottom
+.mb-1 {
+	margin-bottom: $spacer-1 !important;
+}
+
+.mb-2 {
+	margin-bottom: $spacer-2 !important;
+}
+
+.mb-3 {
+	margin-bottom: $spacer-3 !important;
+}
+
+.mb-4 {
+	margin-bottom: $spacer-4 !important;
+}
+
+.mb-5 {
+	margin-bottom: $spacer-5 !important;
+}
+
+//left & right 
+.mx-1 {
+	margin-left: $spacer-1 !important;
+	margin-right: $spacer-1 !important;
+}
+
+.mx-2 {
+	margin-left: $spacer-2 !important;
+	margin-right: $spacer-2 !important;
+}
+
+.mx-3 {
+	margin-left: $spacer-3 !important;
+	margin-right: $spacer-3 !important;
+}
+
+.mx-4 {
+	margin-left: $spacer-4 !important;
+	margin-right: $spacer-4 !important;
+}
+
+.mx-5 {
+	margin-left: $spacer-5 !important;
+	margin-right: $spacer-5 !important;
+}
+
+//top & bottom
+.my-1 {
+	margin-top: $spacer-1 !important;
+	margin-bottom: $spacer-1 !important;
+}
+
+.my-2 {
+	margin-top: $spacer-2 !important;
+	margin-bottom: $spacer-2 !important;
+}
+
+.my-3 {
+	margin-top: $spacer-3 !important;
+	margin-bottom: $spacer-3 !important;
+}
+
+.my-4 {
+	margin-top: $spacer-4 !important;
+	margin-bottom: $spacer-4 !important;
+}
+
+.my-5 {
+	margin-top: $spacer-5 !important;
+	margin-bottom: $spacer-5 !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$font-stack: 'Open Sans', sans-serif;
+$primary-color: #009fff;
+$secondary-color: #292a2c;
+$background: #eee;
+
+$browser-context: 16; 
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$transition-duration: 600ms;
+$transition-delay: $transition-duration;
+
+$sidebar-transition: $transition-duration opacity $transition-delay, $transition-duration visibility $transition-delay;
+
+body {
+  background-color: gray;
+  font-family: $font-stack;
+}
+.wp-content {
+  margin-top: 60px;
+  margin-left: 75px;
+}
+/* Remove unde
+a:hover {
+  text-decoration: none;
+}
+/* Remove Bootstrap button outline */
+button, a {
+  .focus {
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  &:focus {
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+
+[data-component='navbar'] {
+  .navbar {
+  background-color: #fff;
+}
+.navbar-toggler {
+  line-height: 2.4;
+  margin-left: 75px;
+  span {
+    text-transform: uppercase;
+      font-size: em(16);
+      font-weight: 400;
+      font-family: 'Lato', sans-serif;
+      display: none;
+    }
+}
+.navbar-toggler[aria-expanded="true"] {
+    color: #009fff;
+    span {display:initial; color: #009fff;}
+    i {color: #009fff;}
+  }
+.navbar-collapse {
+  background-color: $secondary-color;
+  margin-left: 75px;
+}
+.navbar-nav {
+  height: 100vw;
+}
+//animation transition
+.collapsing {
+    -webkit-transition: height .3s ease;
+       -o-transition: height .3s ease;
+          transition: height .3s ease;
+}
+.navbar-brand {
+  background-color: $primary-color;
+  height: 60px;
+  width: 75px;
+  text-align: center;
+}
+
+/* Right Menu Dropdowns */
+  ::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}
+.right-links {
+  i {
+    color: #000;
+    font-size: 20px;
+    line-height: 2.8;
+  }
+}
+.home {
+    border-right: 1px solid #ababab;
+  }
+.dropdown-toggle::after {
+    display:none;
+  }
+
+.dropdown-item {
+    color: #292b2c;
+    font-size: em(12);
+  }
+
+/* Notification */
+  .dropdown {
+    position: relative;
+    span {
+    color: #fff;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -8px;
+    right: -3px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    font-size: em(10);
+    font-weight: 600;
+    }
+    img {
+      border-radius: 50%;
+      height: 40px;
+    }
+  }
+  /* Notification Dropdown */
+  .list-group {
+    .lg {
+      height: 500px;
+      width: 270px;
+      overflow: auto;
+    }
+    .list-group-item {
+      border-radius: 0;
+      letter-spacing: 0.5px;
+    }
+    h5 {
+      font-size: em(11);
+      font-weight: 700;
+      line-height: 2;
+    }
+    p {
+      font-size: em(9);
+      font-weight: 400;
+      line-height: 2;
+    }
+  }
+
+.megamenu {
+  
+#menuOne, #menuTwo, #menuThree {
+  position:absolute;
+  width:100%;
+  z-index:1;
+}
+.megamenu-links {
+    background-color: #EEEEEE;
+    height: 100vh;
+    overflow: hidden;
+  }
+.btn {
+    font-size: em(14);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    &:hover {
+      background-color: #292a2c;
+      color: #fff;
+    }
+  }
+a[aria-expanded=true] .fa-plus {
+    display: none; 
+  }
+  a[aria-expanded=false] .fa-minus {
+    display: none;
+  }
+  [aria-expanded="true"] {
+    background-color: #292a2c;
+    color: #fff;
+    i {
+      color: #fff;
+      font-size: em(20);
+    }
+  }
+  [aria-expanded="false"] {
+    background-color: #eee;
+    color: #292a2c;
+    border-radius: 0;
+    i {
+      color: #009fff;
+      font-size: em(20);
+    }
+  }
+  .list-group {
+    height: 100vw;
+    background-color: #292a2c;
+  }
+  .list-group-item {
+    border-radius: 0;
+    background-color: #292a2c;
+    font-size: em(12);
+    color: #fff;
+    &:hover {
+      background-color: #009fff;
+    }
+  }
+  
+}
+} //END TOP NAVBAR
+
+[data-component='sidebar'] {
+  
+.sidebar {
+  position: fixed;
+  z-index: 9999;
+}
+//black menu
+.first-menu {
+  position: fixed;
+  background-color: $secondary-color;
+  height: 100vw;
+  width: 75px;
+  top: 60px;
+  overflow: hidden;
+  transition: width .5s;
+  a {
+    color: #fff;
+  }
+  i {
+    font-size: 24px;
+  }
+  span {
+    font-size: 14px;
+    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    
+  }
+  &:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+  .list-group-item {
+    border-radius: 0;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+.first-menu:hover {
+  width: 160px;
+}
+
+.list-group-item {
+  font-size: 14px;
+}
+
+
+//blue menu
+.submenu {
+  position: fixed;
+  left: 160px;
+  width: 195px;
+  top: 60px;
+  background-color: $primary-color;
+  height: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: $sidebar-transition;
+  
+  .list-group-item {
+    margin-top: 8px;
+  }
+}
+
+.first-menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+//white menu
+.sub-submenu {
+  position: fixed;
+  background-color: #fff;
+  left: 355px;
+  top: 60px;
+  height: 100vw;
+  width: 195px;
+  opacity: 0;
+  visibility: hidden;
+  transition: $sidebar-transition;
+  a {
+    color: $primary-color;
+  }
+  .list-group-item:hover {
+    background-color: transparent;
+  }
+}
+.submenu li:hover .sub-submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.arrow {
+  position: fixed;
+  left: 329px;
+  width: 0; 
+  height: 0; 
+  border-top: 27px solid transparent;
+  border-bottom: 27px solid transparent; 
+  
+  border-right: 27px solid white;
+  &:nth-child(3) {top: 20px;}
+}
+}
+------------------------------------------------------------------------------
+<!-- This is a reverse engineering of the "Hyperspace"
+     design from HTML5 Up! https://html5up.net/hyperspace -->
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="#">Welcome</a></li>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">What We Do</a></li>
+        <li><a href="#">Get In Touch</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="twitter">
+    <div class="container">
+      <a target="_blank" href="https://twitter.com/ReisnerShawn">
+        <img class="social" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+      </a>
+      <p>Follow me</p>
+      <p>on Twitter!</p>
+    </div>
+  </section>
+</main>
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  font-family: Arial;
+  font-size: 16px;
+  background: #5e42a6;
+}
+
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background: #312450;
+  font-size: 0.65em;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  
+  li {
+    position: relative;
+    margin: 3.2em 0;
+    
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: rgba(#FFF, 0.35);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    &.active a {
+      color: white;
+    }
+    
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    
+    &:not(.active):hover a {
+      color: rgba(#FFF, 0.75);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #b74e91)
+    }
+  }
+}
+
+.twitter {
+  position: relative;
+  width: 75%;
+  float: right;
+  height: 100vh;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  a {
+    position: relative;
+    
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  p {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
+
+--------------------------------------------------------------------------------
+<div class="hide"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="-167.4 267.7 257.7 257.7" id="facebook"><path d="M76.1 267.7h-229.3c-7.9 0-14.2 6.4-14.2 14.2v229.3c0 7.9 6.4 14.2 14.2 14.2h123.4v-99.8h-33.6v-38.9h33.6V358c0-33.3 20.3-51.4 50-51.4 14.2 0 26.5 1.1 30 1.5v34.8H29.6c-16.1 0-19.3 7.7-19.3 18.9v24.8h38.5l-5 38.9H10.4v99.8h65.7c7.9 0 14.2-6.4 14.2-14.2V281.9c0-7.8-6.4-14.2-14.2-14.2z"/></symbol><symbol viewBox="-211.1 354.7 82.6 84.9" id="googleplus"><path d="M-167.5 403.2l-4-3.1c-1.2-1-2.9-2.3-2.9-4.8 0-2.4 1.7-4 3.1-5.4 4.6-3.7 9.3-7.5 9.3-15.7 0-8.4-5.3-12.9-7.8-15h6.8l7.2-4.5h-21.8c-6 0-14.6 1.4-20.9 6.6-4.8 4.1-7.1 9.8-7.1 14.8 0 8.6 6.6 17.4 18.3 17.4 1.1 0 2.3-.1 3.5-.2-.5 1.3-1.1 2.4-1.1 4.3 0 3.4 1.8 5.5 3.3 7.5-5 .3-14.3.9-21.1 5.1-6.5 3.9-8.5 9.5-8.5 13.5 0 8.2 7.7 15.8 23.8 15.8 19 0 29.1-10.5 29.1-20.9.1-7.5-4.4-11.3-9.2-15.4zm-14.5-12.7c-9.5 0-13.8-12.3-13.8-19.7 0-2.9.5-5.9 2.4-8.2 1.8-2.2 4.9-3.7 7.7-3.7 9.2 0 13.9 12.4 13.9 20.4 0 2-.2 5.5-2.8 8.1-1.7 1.7-4.6 3.1-7.4 3.1zm.1 44.5c-11.8 0-19.5-5.7-19.5-13.5 0-7.9 7.1-10.5 9.5-11.4 4.6-1.6 10.6-1.8 11.6-1.8 1.1 0 1.7 0 2.5.1 8.4 6 12.1 9 12.1 14.6.1 6.9-5.6 12-16.2 12zm42.3-44.7v-11.1h-5.5v11.1h-11v5.5h11V407h5.5v-11.2h11.1v-5.5"/></symbol><symbol viewBox="62.4 152.4 487.2 487.2" id="instagram"><path d="M493.4 358.5H451c3.1 12 4.9 24.5 4.9 37.5 0 82.8-67.1 149.9-149.9 149.9S156.1 478.8 156.1 396c0-13 1.8-25.5 4.9-37.5h-42.4v206.1c0 10.3 8.4 18.7 18.7 18.7h337.3c10.3 0 18.8-8.4 18.8-18.7V358.5zm0-131.2c0-10.3-8.4-18.7-18.8-18.7h-56.2c-10.3 0-18.7 8.4-18.7 18.7v56.2c0 10.3 8.4 18.7 18.7 18.7h56.2c10.3 0 18.8-8.4 18.8-18.7v-56.2zm-187.4 75c-51.7 0-93.7 41.9-93.7 93.7 0 51.7 41.9 93.7 93.7 93.7 51.7 0 93.7-42 93.7-93.7 0-51.8-42-93.7-93.7-93.7m187.4 337.3H118.6c-31 0-56.2-25.2-56.2-56.2V208.6c0-31 25.2-56.2 56.2-56.2h374.8c31 0 56.2 25.2 56.2 56.2v374.7c0 31.1-25.2 56.3-56.2 56.3"/></symbol><symbol viewBox="-313 288.4 36.1 37.3" id="paper-airplane"><path d="M-312.1 309l8.8 4.6 1.8 10.7c.1.7.7 1.2 1.3 1.3h.3c.6 0 1.1-.3 1.4-.7l4.6-7.5 9.7 4.8c.2.1.5.2.7.2s.5-.1.7-.2c.5-.2.8-.7.9-1.2l4.8-30c.2-.9-.3-1.9-1.2-2.3-.7-.4-1.6-.4-2.2 0l-31.9 17.4c-.5.3-.8.8-.8 1.5.2.6.5 1.2 1.1 1.4zm27.4 9.3l-7.4-3.6 10.8-17.4-3.4 21zm-11.2-3.9l-3.1 5-1.1-6.3 12.9-12.8-8.7 14.1zm7.8-17.7l-14.1 13.8-5.8-3 19.9-10.8z"/></symbol><symbol viewBox="-326.8 274.8 63.7 64.5" id="person"><path d="M-282.1 306.7l-2.5-1.1 1.8-2.1c2.6-3.1 4.1-6.9 4.1-10.9v-1.2c0-9.2-7.5-16.8-16.8-16.8h-1.2c-9.2 0-16.8 7.6-16.8 16.8v1.2c0 4.2 1.6 8.3 4.6 11.5l1.9 2-2.5 1.2c-10.7 5.1-17.6 16.1-17.6 27.9 0 2.2 1.8 4.1 4.1 4.1s4.1-1.8 4.1-4.1c0-12.5 10.2-22.8 22.8-22.8.2 0 .4 0 .6-.1l.3-.1.3.1c.3 0 .5.1.6.1 12.5 0 22.8 10.2 22.8 22.8 0 2.2 1.8 4.1 4.1 4.1 2.2 0 4.1-1.8 4.1-4.1.1-12.5-7.3-23.6-18.8-28.5zm-4.7-14.4v.4c0 4.7-3.9 8.6-8.6 8.7h-.8c-4.8 0-8.6-3.9-8.6-8.7v-1.2c0-2.3.9-4.5 2.5-6.1 1.6-1.6 3.8-2.5 6.1-2.5h1.2c4.8 0 8.6 3.9 8.6 8.7v.6l-.4.1z"/></symbol><symbol viewBox="-232.1 369.1 41.9 54.2" id="pinterest"><path d="M-209.8 369.1c-14.8 0-22.2 10.6-22.2 19.4 0 5.4 2 10.1 6.4 11.9.7.3 1.4 0 1.6-.8.1-.5.5-1.9.6-2.5.2-.8.1-1.1-.4-1.7-1.3-1.5-2.1-3.4-2.1-6.1 0-7.9 5.9-14.9 15.3-14.9 8.4 0 12.9 5.1 12.9 11.9 0 9-4 16.5-9.9 16.5-3.3 0-5.7-2.7-4.9-6 .9-3.9 2.7-8.2 2.7-11 0-2.5-1.4-4.7-4.2-4.7-3.3 0-6 3.4-6 8.1 0 2.9 1 4.9 1 4.9l-4 17c-1.2 5-.2 11.2-.1 11.8 0 .4.5.5.7.2.3-.4 4.3-5.3 5.6-10.2.4-1.4 2.2-8.6 2.2-8.6 1.1 2.1 4.2 3.9 7.6 3.9 10 0 16.8-9.1 16.8-21.3.1-9.2-7.8-17.8-19.6-17.8z"/></symbol><symbol viewBox="-323.2 278.2 56.3 57.6" id="share"><path d="M-276.9 315.6c-2.6 0-5 1-6.8 2.6l-19.3-9.9c.1-.5.1-1 .1-1.5v-.9l19.5-9.9c1.8 1.5 4 2.4 6.5 2.4 5.6 0 10.1-4.5 10.1-10.1s-4.5-10.1-10.1-10.1-10.1 4.5-10.1 10.1v.9l-19.5 9.9c-1.8-1.5-4-2.4-6.6-2.4-5.6 0-10.1 4.5-10.1 10.1s4.5 10.1 10.1 10.1c2.3 0 4.3-.7 6-2l20 10.2v.5c0 5.6 4.5 10.1 10.1 10.1s10.1-4.5 10.1-10.1c.1-5.5-4.5-10-10-10z"/></symbol><symbol viewBox="0 137.8 612 516.4" id="speech-bubble"><path d="M549.7 199.1v324.2h-63.4L415.6 594l-66.5-70.7H61.3V199.1h488.4m0-61.3H61.3C27 137.8 0 165.9 0 199.1v324.2c0 34.3 28.1 61.3 61.3 61.3h261.8l48.8 50.9c11.4 12.5 27 18.7 43.6 18.7h1c16.6 0 32.2-6.2 43.6-17.7l52-52h38.4c34.3 0 61.3-28.1 61.3-61.3V199.1c-.8-34.3-27.9-61.3-62.1-61.3z"/></symbol><symbol viewBox="9.7 189.1 592.5 413.7" id="twitter"><path d="M239.2 602.2C129 596.7 59.9 550.2 9.7 484.7c26.3 22.6 63.6 42.8 112.6 40.4s82.6-22.6 107.1-47.7c-17.1 2.4-33-4.3-39.8-14.1-9.8-15.9 5.5-30.6 19.6-36.1-36.1 1.8-59.4-13.5-72.2-36.7 8.6-10.4 22-15.9 39.8-16.5-32.4-9.2-60-24.5-65.5-60.6 11.6-1.8 21.4-4.9 34.9-4.3-23.9-15.3-50.8-34.9-49.6-75.3 36.1 13.5 72.8 28.2 106.5 44.7 34.3 16.5 67.3 33 91.2 60 21.4-56.9 45.9-113.8 93-144.4-.6 7.3-4.3 11.6-7.3 15.9 12.2-9.8 26.3-17.7 45.3-20.8-3.1 11-11.6 15.9-21.4 19.6 6.7-1.8 14.1-4.9 23.3-7.3 6.1-1.8 25.1-6.7 25.1 3.1 0 8.6-14.1 12.2-22 14.7-11.6 3.7-20.2 4.9-28.2 8.6 41.6-1.2 69.8 17.7 90.6 39.2 19 19.6 31.8 45.3 37.9 74.7 22 8 53.2 1.2 69.8-7.3-9.2 22.6-32.4 36.1-63.6 38.6 16.5 7.3 42.2 9.8 65.5 7.3.6 1.2-2.4 4.3-4.3 6.1-14.8 12.6-36.9 20.5-65 20.5-16.5 61.2-53.9 106.5-99.8 138.3-46.5 32.4-105.9 54.5-181.2 57.5-3.6-.6-8.5-.6-12.8-.6z"/></symbol><symbol viewBox="-324.7 285.2 59.4 43.7" id="video-player"><path d="M-271.2 285.2h-47.6c-3.3 0-5.9 2.7-5.9 5.9v31.8c0 3.3 2.7 5.9 5.9 5.9h47.6c3.3 0 5.9-2.7 5.9-5.9v-31.8c0-3.3-2.6-5.9-5.9-5.9zm0 37.7h-47.6v-31.8h47.6v31.8zM-304.2 319.3c.5.3 1 .4 1.5.4s1-.1 1.5-.4l16.8-9.7c.9-.5 1.5-1.5 1.5-2.6s-.6-2-1.5-2.6l-16.8-9.7c-.9-.5-2-.5-3 0-.9.5-1.5 1.5-1.5 2.6v19.5c.1 1 .6 2 1.5 2.5zm4.5-16.9l8 4.6-8 4.6v-9.2z"/></symbol></svg></div>
+
+<header class="main-head">
+      <nav class="head-nav">
+        <ul class="menu">
+          <li>
+            <a href="#">
+              <svg class="person">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#person"></use>
+              </svg><span>About</span></a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="video-player">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#video-player"></use>
+              </svg><span>Work</span></a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="speech-bubble">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speech-bubble"></use>
+              </svg><span>Blog</span></a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="paper-airplane">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#paper-airplane"></use>
+              </svg><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+</header> <!-- //main-head -->
+
+<div class="wrap-all-the-things"></div>
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+$color-1: #1a1a1a;
+$color-2: #fefefe;
+$pad:     0.925rem;
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Roboto;
+  height: 100%;
+}
+.hide{
+  display: none;
+}
+.head-nav {
+  li{
+    &:hover{
+        background-color: $color-1;
+        &:before{
+            background-color: $color-1;
+        }
+        svg{
+            background: $color-1;
+            fill: #ED1C5B;
+        }
+        a{
+          color: #ED1C5B;
+        }
+    }
+    &:before{
+        position: absolute;
+        left: -$pad;
+        top: 0;
+        width: $pad;
+        height: 100%;
+        content: "";
+        background: #ED1C5B;
+        z-index: 1;
+        transition: background 400ms;
+    }
+  }
+  ul{
+      margin: {top:$pad*2;right:0;bottom:0;left:0;}
+      padding: 0;
+      list-style: none;
+  }
+  li{
+      position: relative;
+      clear: both;
+      width: 100%;
+      padding: 0;
+      transition: background 400ms;
+      a{
+          display: flex;
+          padding: {top:2vh;bottom:2vh;}
+      }
+  }
+  a{
+      align-items: center;
+      width: 100%;
+      color: $color-2;
+      text-decoration: none;
+      transition: color 400ms;
+      span{
+          position: relative;
+          display: block;
+          z-index: 0;
+          font-family: Roboto;
+          text-indent: -20em;
+          white-space: nowrap;
+          transition: text-indent 400ms ease-in-out;
+      }
+  }
+  svg{
+      position: relative;
+      max-width: 80px;
+      max-height: 30px;
+      z-index: 1;
+      fill: $color-2;
+      background: #ED1C5B;
+      transition: 400ms;
+  }
+  @media screen and (max: 768px){
+      ul{
+          margin: {top:$pad/4}
+      }
+      svg{
+          max-width: 20px;
+      }
+  }
+}
+.main-head{
+  position: fixed;
+  bottom: 0;
+  width: 83px;
+  height: 100%;
+  z-index: 1;
+  background: #ED1C5B;
+  transition: width 400ms;
+  &:hover{
+      width: 436px;
+      & + .wrap-all-the-things{
+          transform: translateX(336px);
+          max-width: 100%;
+          opacity: 0.4;
+      }
+      .head-nav{
+          li{
+              @for $i from 1 through 4 {
+                  &:nth-of-type(#{$i}){
+                      span{
+                          transition-delay: 100ms * $i;
+                      }
+                  }
+              }
+          }
+          span{
+              text-indent: 0;
+          }
+      }
+  }
+  @media screen and (max: 768px){
+      width: 70px;
+      padding: 0 $pad;
+      .head-nav{
+          padding: {left:7px;}
+      }
+      &:hover{
+          .head-nav{
+              span{
+                  text-indent: 1em;
+              }
+          }
+      }
+  }
+}
+.wrap-all-the-things{
+  min-height: 100%;
+  height: 100%;
+  padding: {left:140px;}
+  margin: {top: 0;}
+  background-image: url(https://download.unsplash.com/photo-1428976365951-b70e0fa5c551);
+  background-size: cover;
+  background-position: center center;
+  transition: transform 400ms, opacity 400ms;
+  @media screen and (max: 480px){
+      padding: {left:70px;}
+  }
+}
+
+--------------------------------------------------------------------------------
+<svg style="display:none;">
+  <defs>
+
+    <g id="home">
+      <path fill="#90A4AE" d="M42,48H6c-3.3,0-6-2.7-6-6V6c0-3.3,2.7-6,6-6h36c3.3,0,6,2.7,6,6v36C48,45.3,45.3,48,42,48z"/>
+      <path fill="#212121" d="M20.8,35.5v-9.6h6.4v9.6h8V22.7H40L24,8.3L8,22.7h4.8v12.8H20.8z"/>
+    </g>
+
+    <g id="search">
+      <path fill="#90A4AE" d="M22.9,20.1h-1.5l-0.5-0.5c1.8-2.1,2.9-4.8,2.9-7.7C23.8,5.3,18.5,0,11.9,0S0,5.3,0,11.9s5.3,11.9,11.9,11.9
+	    c3,0,5.7-1.1,7.7-2.9l0.5,0.5v1.4l9.1,9.1l2.7-2.7L22.9,20.1z M11.9,20.1c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2
+	    S16.4,20.1,11.9,20.1z"/>
+    </g>
+
+    <g id="map">
+      <path fill="#90A4AE" d="M16,14.2c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8c1,0,1.8-0.8,1.8-1.8S17,14.2,16,14.2z M16,0
+	    C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16s16-7.2,16-16C32,7.2,24.8,0,16,0z M19.5,19.5L6.4,25.6l6.1-13.1l13.1-6.1L19.5,19.5z"/>
+    </g>
+
+    <g id="planner">
+      <path fill="#90A4AE" d="M28.4,3.6h-1.8V0h-3.6v3.6H8.9V0H5.3v3.6H3.6C1.6,3.6,0,5.1,0,7.1L0,32c0,2,1.6,3.6,3.6,3.6h24.9c2,0,3.6-1.6,3.6-3.6V7.1C32,5.1,30.4,3.6,28.4,3.6z M28.4,32H3.6V12.4h24.9V32z M7.1,16H16v8.9H7.1V16z"/>
+    </g>
+
+  </defs>
+</svg>
+
+
+<nav class="nav__cont">
+  <ul class="nav">
+    <li class="nav__items ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <use xlink:href="#home"></use>
+      </svg>
+      <a href="">Home</a>
+    </li>
+    
+    <li class="nav__items ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <use xlink:href="#search"></use>
+      </svg>
+      <a href="">Search</a>
+    </li>
+      
+    <li class="nav__items ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <use xlink:href="#map"></use>
+      </svg>
+     <a href="">Map</a>
+    </li>
+      
+    <li class="nav__items ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35.6">
+        <use xlink:href="#planner"></use></svg>
+      <a href="">Planner</a>
+    </li>
+        
+  </ul>
+</nav>
+
+  
+  <div class="wrapper">
+    <main>
+      <h1>Fixed Side Drawer Hover Navigation </h1>
+    </main>
+  </div>
+
+.nav__cont {
+  position: fixed;
+  width: 60px;
+  top:0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #202020;
+  overflow:hidden;
+  transition:width .3s ease;
+  cursor:pointer;
+  box-shadow:4px 7px 10px rgba(0,0,0,.4);
+  &:hover {
+    width:200px;
+  }
+  @media screen and (min-width: 600px) {
+    width: 80px;
+  }
+}
+
+.nav {
+  list-style-type: none;
+  color:white;
+  &:first-child {
+    padding-top:1.5rem;
+  }
+}
+
+.nav__items {
+  padding-bottom:4rem;
+  font-family: 'roboto';
+   a {
+    position: relative;
+    display:block;
+    top:-35px;
+    padding-left:25px;
+    padding-right:15px;
+    transition:all .3s ease;
+    margin-left:25px;
+    margin-right:10px;
+    text-decoration: none;
+    color:white;
+    font-family: 'roboto';
+    font-weight: 100;
+    font-size: 1.35em;
+     &:after {
+       content:'';
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top:0;
+       left:0;
+       border-radius:2px;
+       background:radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
+       opacity:0;
+       transition:all .5s ease;
+       z-index: -10;
+     }
+  }
+  &:hover a:after {
+    opacity:1;
+  }
+   svg{
+    width:26px;
+    height:26px;
+    position: relative;
+    left:-25px;
+    cursor:pointer;
+    @media screen and(min-width:600px) {
+      width:32px;
+    height:32px;
+left:-15px;
+    }
+  }
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%),radial-gradient(circle at 25.99% 27.79%, #ff94fb, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+}
+
+h1 {
+  margin-top: 6rem;
+  margin-left:80px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-size: 4rem;
+  text-transform:uppercase;
+  color:white;
+  letter-spacing:6px;
+  text-shadow:10px 10px 10px rgba(0,0,0,.3);
+}
+
+
+
+
+
+--------------------------------------------------------------------------------
+<!DOCTYPE html><html class="menu">
+<html>
+
+<head>
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+<meta name="google" value="notranslate"/>
+<title>Side Menu</title>
+
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+ 
+
+
+
+</head>
+<body>
+
+
+
+</div><nav class="main-menu">
+
+
+  
+ <div>
+    <a class="logo" href="http://startific.com">
+    </a> 
+  </div> 
+<div class="settings"></div>
+<div class="scrollbar" id="style-1">
+      
+<ul>
+  
+<li>                                   
+<a href="http://startific.com">
+<i class="fa fa-home fa-lg"></i>
+<span class="nav-text">Home</span>
+</a>
+</li>   
+   
+<li>                                 
+<a href="http://startific.com">
+<i class="fa fa-user fa-lg"></i>
+<span class="nav-text">Login</span>
+</a>
+</li>   
+
+    
+<li>                                 
+<a href="http://startific.com">
+<i class="fa fa-envelope-o fa-lg"></i>
+<span class="nav-text">Contact</span>
+</a>
+</li>   
+  
+
+
+ 
+<li>
+<a href="http://startific.com">
+<i class="fa fa-heart-o fa-lg"></i>
+                        
+<span class="share"> 
+
+
+<div class="addthis_default_style addthis_32x32_style">
+  
+<div style="position:absolute;
+margin-left: 56px;top:3px;"> 
+   
+  
+
+  
+ <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-popup"><img src="http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png" width="30px" height="30px"></a>
+
+   <a href="https://twitter.com/share" target="_blank" class="share-popup"><img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/Twitter_alt.png" width="30px" height="30px"></a>
+
+   
+
+
+<a href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_
+" target="_blank" class="share-popup"><img src="http://icons.iconarchive.com/icons/danleech/simple/512/google-plus-icon.png" width="30px" height="30px"></a>   
+  
+  
+  
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script>
+                       
+                            
+                              
+                            
+                          
+                        </span>
+                        <span class="twitter"></span>
+                        <span class="google"></span>
+                        <span class="fb-like">  
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
+                       
+                        </span>
+                        <span class="nav-text">
+                        </span>
+                        
+                    </a>
+
+</li>
+                            
+
+  
+  
+</li>
+<li class="darkerlishadow">
+<a href="http://startific.com">
+<i class="fa fa-clock-o fa-lg"></i>
+<span class="nav-text">News</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-desktop fa-lg"></i>
+<span class="nav-text">Technology</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-plane fa-lg"></i>
+<span class="nav-text">Travel</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-shopping-cart"></i>
+ <span class="nav-text">Shopping</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-microphone fa-lg"></i>
+<span class="nav-text">Film & Music</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-flask fa-lg"></i>
+<span class="nav-text">Web Tools</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-picture-o fa-lg"></i>
+<span class="nav-text">Art & Design</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-align-left fa-lg"></i>
+<span class="nav-text">Magazines
+</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-gamepad fa-lg"></i>
+<span class="nav-text">Games</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-glass fa-lg"></i>
+<span class="nav-text">Life & Style
+</span>
+</a>
+</li>
+  
+<li class="darkerlishadowdown">
+<a href="http://startific.com">
+<i class="fa fa-rocket fa-lg"></i>
+<span class="nav-text">Fun</span>
+</a>
+</li>
+ 
+  
+</ul>
+
+  
+<li>
+                                   
+<a href="http://startific.com">
+<i class="fa fa-question-circle fa-lg"></i>
+<span class="nav-text">Help</span>
+</a>
+</li>   
+    
+  
+<ul class="logout">
+<li>
+                   <a href="http://startific.com">
+                         <i class="fa fa-lightbulb-o fa-lg"></i>
+                        <span class="nav-text">
+                            BLOG 
+                        </span>
+                        
+                    </a>
+</li>  
+</ul>
+        </nav>
+        
+  
+
+			
+  
+  
+</body>
+</html>
+
+
+body
+{
+  margin:0px;
+  padding:0px;
+	font-family: "Open Sans", arial;
+	background:url('https://static.tumblr.com/94eb957a00fd03c0c2f7d26decd71578/u1rhacw/osAmyyh1q/tumblr_static_tumblr_static_gaussian_blur_gradient_desktop_1680x943_wallpaper-393751.jpg');
+	color:#fff;
+	font-weight:300;
+
+}
+
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+.logo{
+  
+}
+
+.settings {
+  
+  height:73px; 
+  float:left;
+  background:url( https://s3.postimg.org/bqfooag4z/startific.jpg);
+  background-repeat:no-repeat;
+  width:250px;
+  margin:0px;
+ text-align: center;
+font-size:20px;
+font-family: 'Strait', sans-serif;
+
+}
+
+
+
+
+
+
+/* ScrolBar  */
+.scrollbar
+{
+
+height: 90%;
+width: 100%;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+.scrollbar:hover
+{
+
+height: 90%;
+width: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+/* Scrollbar Style */ 
+
+
+
+#style-1::-webkit-scrollbar-track
+{
+border-radius: 2px;
+}
+
+#style-1::-webkit-scrollbar
+{
+width: 5px;
+background-color: #F7F7F7;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #BFBFBF;
+}
+/* Scrollbar End */ 
+
+
+
+
+.fa-lg {
+font-size: 1em;
+  
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 55px;
+height: 36px;
+text-align: center;
+top:12px; 
+font-size:20px;
+
+}
+
+
+
+.main-menu:hover, nav.main-menu.expanded {
+width:250px;
+overflow:hidden;
+opacity:1;
+
+}
+
+.main-menu {
+background:#F7F7F7;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:55px;
+overflow:hidden;
+-webkit-transition:width .2s linear;
+transition:width .2s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+  opacity:1;
+}
+
+.main-menu>ul {
+margin:7px 0;
+
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+  
+
+
+}
+
+.main-menu li>a {
+position:relative;
+width:255px;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#8a8a8a;
+font-size: 13px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .14s linear;
+transition:all .14s linear;
+font-family: 'Strait', sans-serif;
+border-top:1px solid #f2f2f2;
+
+text-shadow: 1px 1px 1px  #fff;  
+}
+
+
+
+.main-menu .nav-icon {
+  
+position:relative;
+display:table-cell;
+width:55px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+
+}
+
+.main-menu .nav-text  {
+   
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu .share {
+}
+
+
+
+.main-menu .fb-like {
+
+left: 180px;
+position:absolute;
+top: 15px;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+  
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+  
+}
+
+
+/* Logo Hover Property */
+
+
+.settings:hover, settings:focus {   
+  background:url( https://s17.postimg.org/74cl7s05b/logo_hover.jpg);
+  -webkit-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-moz-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+-o-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
+transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0; 
+}
+
+.settings:active, settings:focus {   
+  background:url( https://s3.postimg.org/bqfooag4z/startific.jpg);
+  -webkit-transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
+-moz-transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
+-o-transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
+transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0; 
+}
+
+
+a:hover,a:focus {
+text-decoration:none;
+border-left:0px solid #F7F7F7;
+
+
+
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+  
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+text-transform: uppercase;
+}
+
+
+
+
+/* Darker element side menu Start*/
+
+
+.darkerli
+{
+background-color:#ededed;
+text-transform:capitalize;  
+}
+
+.darkerlishadow
+{
+background-color:#ededed;
+text-transform:capitalize;  
+-webkit-box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
+-moz-box-shadow:    inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
+box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
+}
+
+
+.darkerlishadowdown
+{
+background-color:#ededed;
+text-transform:capitalize;  
+-webkit-box-shadow: inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
+-moz-box-shadow:    inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
+box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
+}
+
+/* Darker element side menu End*/
+
+
+
+
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#00bbbb;
+text-shadow: 0px 0px 0px; 
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+
+--------------------------------------------------------------------------------
+
+<nav>
+  <ul>
+    <li>
+      <div class="home-icon">
+        <div class="roof">
+          <div class="roof-edge"></div>
+        </div>
+        <div class="front"></div>
+      </div>
+    </li>
+    <li>
+      <div class="about-icon">
+        <div class="head">
+          <div class="eyes"></div>
+          <div class="beard"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="work-icon">
+        <div class="paper"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+      </div>
+    </li>
+    <li>
+      <div class="mail-icon">
+        <div class="mail-base">
+          <div class="mail-top"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<section>
+  <h1>3d rotating navigation</h1>
+  <h2>+ CSS Icons</h2>
+</section>
+
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+:after {
+	content: "";
+}
+
+section {
+  position: relative;
+  left: 100px;
+}
+
+h1 { 
+  margin:80px 0 10px 0;
+  font-size: 52px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #DC143C,
+	2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+body {
+  padding: 100px 0;
+	background: lightblue;
+  color: white;
+  max-width:640px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+  line-height:1.4;
+  font-smoothing: anti-aliased;
+}
+
+nav {
+  float: left;
+	position: relative;
+	top: 0;
+  left: 0;
+	background: transparent;
+}
+
+nav ul {
+	text-align: center;
+}
+
+nav ul li {
+	position: relative;
+  width: 70px;
+  cursor: pointer;
+	background: crimson;
+	text-transform: uppercase;
+	transition:all .4s ease-out;
+}
+
+nav ul li:after {
+	position: absolute;
+	background: white;
+	color: crimson;
+	top:0;
+	left: 70px;
+	width: 70px; height: 100%;
+  opacity:.5;
+  transform: perspective(400px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
+}
+
+nav ul li:nth-child(1):after { 
+	content: "Home";
+	line-height: 88px;
+}
+nav ul li:nth-child(2):after { 
+	content: "About";
+	line-height: 88px;
+}
+nav ul li:nth-child(3):after { 
+	content: "Work";
+	line-height: 85px;
+}
+nav ul li:nth-child(4):after { 
+	content: "Say hi";
+	line-height: 70px;
+}
+
+nav ul li:hover {
+	transform: translateX(-70px);
+}
+
+nav ul li:hover:after {
+  opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+
+
+nav ul li > div {
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+nav ul li div { position: relative; }
+
+.roof {
+	width: 0;
+	height: 0;
+	top:2px;
+	border-style: solid;
+	border-width: 0 21px 15px 21px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.roof-edge {
+	position: absolute;
+	z-index: 20;
+	left: -17px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 17px 12px 17px;
+	border-color: transparent transparent crimson transparent;
+}
+/*white triangle over red triangle*/
+.roof-edge:after {
+	position: absolute;
+	left: -14.5px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 14.5px 10px 14.5px;
+	border-color: transparent transparent white transparent;
+}
+
+.front {
+	position: relative;
+	top: 3px;
+	width: 28.5px;
+	height: 20px;
+	margin: 0 auto;
+	background: white;
+}
+/*door*/
+.front:after {
+	position: absolute;
+	background: crimson;
+	width: 11px;
+	height: 13px;
+	bottom: 0;
+	left:9px;
+}
+
+/*/// About me ////*/
+
+.head {
+	width: 32px;
+	height: 35px;
+	background: white;
+	border-radius:8px;
+}
+/*mouth*/
+.head:after {
+	width: 4px;
+	height: 10px;
+	background: white;
+	position: absolute;
+	border-radius:4px 0 0 4px;
+	top:21px;
+	left: 14px;
+	transform:rotate(270deg);
+}
+
+.eyes {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	background: crimson;
+}
+/*right eye*/
+.eyes:after {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 14px;
+	background: crimson;
+}
+
+.beard {
+	width: 32px;
+	height: 17px;
+	background: crimson;
+	border:2px solid white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius:0 0 8px 8px;
+}
+/*nose*/
+.beard:after {
+	position: absolute;
+	top:-2px;
+	left: 11px;
+	background: white;
+	width:6px;
+	height: 4px;
+	border-left:1px solid crimson;
+	border-right:1px solid crimson;
+}
+
+/*//work//*/
+
+.paper {
+	position: relative;
+	height:32px;
+	width: 29px;
+	background: white;
+	border:2px solid white;
+}
+
+/*window*/
+.paper:after {
+	position: absolute;
+	top:1px;
+	left: 0;
+	width: 25px;
+	height: 29px;
+	background: white;
+	border-top:4px solid crimson;
+}
+
+.lines {
+	position: absolute;
+	top: 36px;
+	left: 5px;
+	width: 11px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:after {
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 14px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:nth-child(2) {
+	position: absolute;
+	top: 44px;
+	left: 8px;
+	width: 11px;
+}
+
+.lines:nth-child(2):after {
+	position: absolute;
+	top: 4px;
+	left: -3px;
+	width: 11px;
+}
+
+.lines:nth-child(3) {
+	position: absolute;
+	top: 52px;
+	left: 8px;
+	width: 14px;
+}
+
+.lines:nth-child(3):after {
+	display: none;
+}
+
+/*//mail //*/
+
+.mail-base {
+	position: relative;
+	width: 32px;
+	height: 18px;
+	background: white;
+}
+
+.mail-top {
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	transform: rotate(180deg);
+	border-style: solid;
+	border-width: 0 16px 11px 16px;
+	border-color: transparent transparent crimson transparent;
+}
+
+.mail-top:after {
+	position: absolute;
+	z-index: 20;
+	left: -16px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 16px 9px 16px;
+	border-color: transparent transparent white transparent;
+}
+
+
+
+--------------------------------------------------------------------------------
+
+<div class="container">
+<nav>
+		<ul class="mcd-menu">
+			<li>
+				<a href="">
+					<i class="fa fa-home"></i>
+					<strong>Home</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="" class="active">
+					<i class="fa fa-edit"></i>
+					<strong>About us</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-gift"></i>
+					<strong>Features</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-globe"></i>
+					<strong>News</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-comments-o"></i>
+					<strong>Blog</strong>
+					<small>what they say</small>
+				</a>
+				<ul>
+					<li><a href="#"><i class="fa fa-globe"></i>Mission</a></li>
+					<li>
+						<a href="#"><i class="fa fa-group"></i>Our Team</a>
+						<ul>
+							<li><a href="#"><i class="fa fa-female"></i>Leyla Sparks</a></li>
+							<li>
+								<a href="#"><i class="fa fa-male"></i>Gleb Ismailov</a>
+								<ul>
+									<li><a href="#"><i class="fa fa-leaf"></i>About</a></li>
+									<li><a href="#"><i class="fa fa-tasks"></i>Skills</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="fa fa-female"></i>Viktoria Gibbers</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-trophy"></i>Rewards</a></li>
+					<li><a href="#"><i class="fa fa-certificate"></i>Certificates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-picture-o"></i>
+					<strong>Portfolio</strong>
+					<small>sweet home</small>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-envelope-o"></i>
+					<strong>Contacts</strong>
+					<small>drop a line</small>
+				</a>
+			</li>
+			<li class="float">
+				<a class="search">
+					<input type="text" value="search ...">
+					<button><i class="fa fa-search"></i></button>
+				</a>
+				<a href="" class="search-mobile">
+					<i class="fa fa-search"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+
+body { 
+	background: #EEE; 
+	overflow-x:hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.container {
+    position: relative;
+    margin: 0px auto;
+    padding: 50px 0;
+    clear: both;
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1210px;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .container {
+        width: 1030px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container {
+        width: 682px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 428px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .container {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
+
+
+  
+.mcd-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  /*height: 100px;*/
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  
+  /* == */
+  width: 250px;
+  /* == */
+}
+.mcd-menu li {
+  position: relative;
+  /*float:left;*/
+}
+.mcd-menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 20px;
+  color: #777;
+  /*text-align: center;
+  border-right: 1px solid #E7E7E7;*/
+  
+  /* == */
+  text-align: left;
+  height: 36px;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  /* == */
+}
+.mcd-menu li a i {
+  /*display: block;
+  font-size: 30px;
+  margin-bottom: 10px;*/
+  
+  /* == */
+  float: left;
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  /* == */
+  
+}
+/* == */
+.mcd-menu li a p {
+  float: left;
+  margin: 0 ;
+}
+/* == */
+
+.mcd-menu li a strong {
+  display: block;
+  text-transform: uppercase;
+}
+.mcd-menu li a small {
+  display: block;
+  font-size: 10px;
+}
+
+.mcd-menu li a i, .mcd-menu li a strong, .mcd-menu li a small {
+  position: relative;
+  
+  transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+}
+.mcd-menu li:hover > a i {
+    opacity: 1;
+    -webkit-animation: moveFromTop 300ms ease-in-out;
+    -moz-animation: moveFromTop 300ms ease-in-out;
+    -ms-animation: moveFromTop 300ms ease-in-out;
+    -o-animation: moveFromTop 300ms ease-in-out;
+    animation: moveFromTop 300ms ease-in-out;
+}
+.mcd-menu li:hover a strong {
+    opacity: 1;
+    -webkit-animation: moveFromLeft 300ms ease-in-out;
+    -moz-animation: moveFromLeft 300ms ease-in-out;
+    -ms-animation: moveFromLeft 300ms ease-in-out;
+    -o-animation: moveFromLeft 300ms ease-in-out;
+    animation: moveFromLeft 300ms ease-in-out;
+}
+.mcd-menu li:hover a small {
+    opacity: 1;
+    -webkit-animation: moveFromRight 300ms ease-in-out;
+    -moz-animation: moveFromRight 300ms ease-in-out;
+    -ms-animation: moveFromRight 300ms ease-in-out;
+    -o-animation: moveFromRight 300ms ease-in-out;
+    animation: moveFromRight 300ms ease-in-out;
+}
+
+.mcd-menu li:hover > a {
+  color: #e67e22;
+}
+.mcd-menu li a.active {
+  position: relative;
+  color: #e67e22;
+  border:0;
+  /*border-top: 4px solid #e67e22;
+  border-bottom: 4px solid #e67e22;
+  margin-top: -4px;*/
+  box-shadow: 0 0 5px #DDD;
+  -moz-box-shadow: 0 0 5px #DDD;
+  -webkit-box-shadow: 0 0 5px #DDD;
+  
+  /* == */
+  border-left: 4px solid #e67e22;
+  border-right: 4px solid #e67e22;
+  margin: 0 -4px;
+  /* == */
+}
+.mcd-menu li a.active:before {
+  content: "";
+  position: absolute;
+  /*top: 0;
+  left: 45%;
+  border-top: 5px solid #e67e22;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;*/
+  
+  /* == */
+  top: 42%;
+  left: 0;
+  border-left: 5px solid #e67e22;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  /* == */
+}
+
+/* == */
+.mcd-menu li a.active:after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  right: 0;
+  border-right: 5px solid #e67e22;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+/* == */
+
+@-webkit-keyframes moveFromTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(200%);
+        -moz-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes moveFromLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+        transform: translateX(200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes moveFromRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+
+
+.mcd-menu li ul,
+.mcd-menu li ul li ul {
+  position: absolute;
+  height: auto;
+  min-width: 200px;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  /*border-top: 4px solid #e67e22;*/
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  /*top: 130px;*/
+  z-index: 1000;
+  
+  /* == */
+  left:280px;
+  top: 0px;
+  border-left: 4px solid #e67e22;
+  /* == */
+}
+.mcd-menu li ul:before {
+  content: "";
+  position: absolute;
+  /*top: -8px;
+  left: 23%;
+  border-bottom: 5px solid #e67e22;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;*/
+  
+  /* == */
+  top: 25px;
+  left: -9px;
+  border-right: 5px solid #e67e22;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  /* == */
+}
+.mcd-menu li:hover > ul,
+.mcd-menu li ul li:hover > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  /*top: 100px;*/
+  
+  /* == */
+  left:250px;
+  /* == */
+}
+/*.mcd-menu li ul li {
+  float: none;
+}*/
+.mcd-menu li ul li a {
+  padding: 10px;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #EEE;
+  
+  /* == */
+  height: auto;
+  /* == */
+}
+.mcd-menu li ul li a i {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.mcd-menu li ul li ul {
+  left: 230px;
+  top: 0;
+  border: 0;
+  border-left: 4px solid #e67e22;
+}  
+.mcd-menu li ul li ul:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  /*left: -14px;*/
+  /* == */
+  left: -9px;
+  /* == */
+  border-right: 5px solid #e67e22;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.mcd-menu li ul li:hover > ul {
+  top: 0px;
+  left: 200px;
+}
+
+
+
+/*.mcd-menu li.float {
+  float: right;
+}*/
+.mcd-menu li a.search {
+  /*padding: 29px 20px 30px 10px;*/
+  padding: 10px 10px 15px 10px;
+  clear: both;
+}
+.mcd-menu li a.search i {
+  margin: 0;
+  display: inline-block;
+  font-size: 18px;
+}
+.mcd-menu li a.search input {
+  border: 1px solid #EEE;
+  padding: 10px;
+  background: #FFF;
+  outline: none;
+  color: #777;
+  
+  /* == */
+  width:170px;
+  float:left;
+  /* == */
+}
+.mcd-menu li a.search button {
+  border: 1px solid #e67e22;
+  /*padding: 10px;*/
+  background: #e67e22;
+  outline: none;
+  color: #FFF;
+  margin-left: -4px;
+  
+  /* == */
+  float:left;
+  padding: 10px 10px 11px 10px;
+  /* == */
+}
+.mcd-menu li a.search input:focus {
+  border: 1px solid #e67e22;
+}
+
+
+.search-mobile { 
+	display:none !important;
+	background:#e67e22;
+	border-left:1px solid #e67e22;
+	border-radius:0 3px 3px 0;
+}
+.search-mobile i { 
+	color:#FFF; 
+	margin:0 !important;
+}
+
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .mcd-menu {
+		margin-left:10px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .mcd-menu {
+		width: 200px;
+	}
+	.mcd-menu li a {
+		height:30px;
+	}
+	.mcd-menu li a i {
+		font-size: 22px;
+	}
+	.mcd-menu li a strong {
+		font-size: 12px;
+	}
+	.mcd-menu li a small {
+		font-size: 10px;
+	}	
+	.mcd-menu li a.search input {
+		width: 120px;
+		font-size: 12px;
+	}
+	.mcd-menu li a.search buton{
+		padding: 8px 10px 9px 10px;
+	}
+	.mcd-menu li > ul {
+		min-width:180px;
+	}
+	.mcd-menu li:hover > ul {
+		min-width:180px;
+		left:200px;
+	}
+	.mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+		min-width:150px;
+	}
+	.mcd-menu li ul li:hover > ul {
+		left:180px;
+		min-width:150px;
+	}
+	.mcd-menu li ul li ul li:hover > ul {
+		left:150px;
+		min-width:150px;
+	}
+	.mcd-menu li ul a {
+		font-size:12px;
+	}
+	.mcd-menu li ul a i {
+		font-size:14px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	.mcd-menu { 
+		width: 50px;
+	}
+	.mcd-menu li a { 
+		position: relative;
+		padding: 12px 16px;
+		height:20px;
+	}
+	.mcd-menu li a small { 
+		display: none;
+	}
+	.mcd-menu li a strong { 
+		display: none;
+	}
+	.mcd-menu li a:hover strong,.mcd-menu li a.active strong {
+		display:block;
+		font-size:10px;
+		padding:3px 0;
+		position:absolute;
+		bottom:0px;
+		left:0;
+		background:#e67e22;
+		color:#FFF;
+		min-width:100%;
+		text-transform:lowercase;
+		font-weight:normal;
+		text-align:center;
+	}
+	.mcd-menu li .search { 
+		display: none;
+	}
+	
+	.mcd-menu li > ul {
+		min-width:180px;
+		left:70px;
+	}
+	.mcd-menu li:hover > ul {
+		min-width:180px;
+		left:50px;
+	}
+	.mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+		min-width:150px;
+	}
+	.mcd-menu li ul li:hover > ul {
+		left:180px;
+		min-width:150px;
+	}
+	.mcd-menu li ul li ul li > ul {
+		left:35px;
+		top: 45px;
+		border:0;
+		border-top:4px solid #e67e22;
+	}
+	.mcd-menu li ul li ul li > ul:before {
+		left:30px;
+		top: -9px;
+		border:0;
+		border-bottom:5px solid #e67e22;
+		border-left:5px solid transparent;
+		border-right:5px solid transparent;
+	}
+	.mcd-menu li ul li ul li:hover > ul {
+		left:30px;
+		min-width:150px;
+		top: 35px;
+	}
+	.mcd-menu li ul a {
+		font-size:12px;
+	}
+	.mcd-menu li ul a i {
+		font-size:14px;
+	}
+	
+}
+
+@media only screen and (max-width: 479px) {
+    .mcd-menu { 
+		width: 50px;
+	}
+	.mcd-menu li a { 
+		position: relative;
+		padding: 12px 16px;
+		height:20px;
+	}
+	.mcd-menu li a small { 
+		display: none;
+	}
+	.mcd-menu li a strong { 
+		display: none;
+	}
+	.mcd-menu li a:hover strong,.mcd-menu li a.active strong {
+		display:block;
+		font-size:10px;
+		padding:3px 0;
+		position:absolute;
+		bottom:0px;
+		left:0;
+		background:#e67e22;
+		color:#FFF;
+		min-width:100%;
+		text-transform:lowercase;
+		font-weight:normal;
+		text-align:center;
+	}
+	.mcd-menu li .search { 
+		display: none;
+	}
+	
+	.mcd-menu li > ul {
+		min-width:180px;
+		left:70px;
+	}
+	.mcd-menu li:hover > ul {
+		min-width:180px;
+		left:50px;
+	}
+	.mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+		min-width:150px;
+	}
+	.mcd-menu li ul li:hover > ul {
+		left:180px;
+		min-width:150px;
+	}
+	.mcd-menu li ul li ul li > ul {
+		left:35px;
+		top: 45px;
+		border:0;
+		border-top:4px solid #e67e22;
+	}
+	.mcd-menu li ul li ul li > ul:before {
+		left:30px;
+		top: -9px;
+		border:0;
+		border-bottom:5px solid #e67e22;
+		border-left:5px solid transparent;
+		border-right:5px solid transparent;
+	}
+	.mcd-menu li ul li ul li:hover > ul {
+		left:30px;
+		min-width:150px;
+		top: 35px;
+	}
+	.mcd-menu li ul a {
+		font-size:12px;
+	}
+	.mcd-menu li ul a i {
+		font-size:14px;
+	}
+    
+}
+
+--------------------------------------------------------------------------------
+<html>
+  <head>
+ 
+  </head>
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://justinfarrow.com">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Stars Components
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Forms
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            Pages
+                        </span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                           Quotes
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+  </body>
+    </html>
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+
+--------------------------------------------------------------------------------
+<nav class="sidenav">
+    <ul class="main-buttons">
+      <li>
+        <i class="fa fa-circle fa-2x"></i>
+        Lorem Ipsum 
+        <ul class="hidden">
+          <li>TK-421</li>
+          <li>why aren't </li>
+          <li>you at </li>
+          <li>your post?</li>
+        </ul>
+      </li>
+      <li>
+        <i class="fa fa-circle fa-2x"></i>
+        Dolor Sit
+        <ul class="hidden">
+          <li>Dark</li>
+          <li>Wings</li>
+          <li>Dark</li>
+          <li>Words</li>
+          <li>John SNUUW</li>
+        </ul>
+      </li>
+      <li>
+        <i class="fa fa-circle fa-2x"></i>
+         Consectetur
+         <ul class="hidden">
+          <li>Lorem</li>
+          <li>Ipsum</li>
+          <li>Dolor</li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+
+
+@import "compass/css3";
+
+$color-dark: #1E2027;
+$width: 280px;
+$width-compressed: 52px;
+
+.sidenav{
+  position: fixed;
+  width: $width;
+  height: 100%;
+  background-color: $color-dark;
+
+  .main-buttons{
+    list-style-type: none;
+    margin: 64px 0;
+    padding: 0;
+    color: #fff;
+    li{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    & > li{
+      padding: 16px $width-compressed;
+      @include box-sizing(border-box);
+
+      .fa{
+        position: absolute;
+        left: 12px;
+        color: lighten($color-dark, 16);
+      }
+
+      &:hover, &:active, &:focus{
+        .hidden{
+          width: $width - $width-compressed;
+        }
+        background-color: lighten($color-dark, 5);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hidden{
+  width: 0;
+  height: 100%;
+  padding: 64px 0;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  overflow: hidden;
+  
+  list-style-type: none;
+  background-color: lighten($color-dark, 5);
+  @include transition(0.3s);
+  li{
+    padding: 16px 24px;
+    &:hover, &:active, &:focus{
+      background-color: lighten($color-dark, 9);
+    }
+  }
+}
+
+
+body{background-color: lighten($color-dark, 68);line-height: 30px;}html,body{height:100%;}@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+--------------------------------------------------------------------------------
+<header class="header" role="banner">
+  <h1 class="logo">
+    <a href="#">Terence <span>Devine</span></a>
+  </h1>
+  <div class="nav-wrap">
+    <nav class="main-nav" role="navigation">
+      <ul class="unstyled list-hover-slide">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+    <ul class="social-links list-inline unstyled list-hover-slide">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Google+</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">CodePen</a></li>
+    </ul>
+  </div>
+</header>
+
+@import "compass/css3";
+
+*, :before, :after{ box-sizing: border-box; }
+// FONTS
+$sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+// COLORS
+$orange: #DF4500;
+$gray: #35302D;
+$gray-shine: #3C3735;
+$white-off: #DFDBD9;
+
+// REUSABLE STYLES
+.unstyled{ list-style: none; padding: 0; margin: 0;
+  a{ text-decoration: none; }
+}
+.list-inline{ overflow: hidden;
+  li{ float: left; }
+}
+
+// HEADER STYLES
+.header{
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 17.5em;
+  background: $gray;
+}
+
+.logo{
+  text-transform: lowercase;
+  font: 300 2em $sans;
+  text-align: center;
+  padding: 0; margin: 0;
+  
+  a{
+    display: block;
+    padding: 1em 0;
+    color: $white-off;
+    text-decoration: none;
+    transition: .15s linear color;
+    
+    &:hover{
+      color: #fff;
+      span{ color: $orange; }
+    }
+  }
+  
+  span{
+    font-weight: 700;
+    transition: .15s linear color;
+  }
+}
+
+// MAIN NAV
+.main-nav{
+  
+  ul{
+    border-top: solid 1px $gray-shine;
+  }
+  
+  li{
+    border-bottom: solid 1px $gray-shine;
+  }
+  
+  a{
+    padding: 1.1em 0;
+    color: $white-off;
+    font: 400 1.125em $sans;
+    text:{
+      align: center;
+      transform: lowercase;
+    }
+    
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+// SOCIAL LINKS
+.social-links{
+  border-bottom: solid 1px $gray-shine;
+  
+  li{
+    width: 25%;
+    border-left: solid 1px $gray-shine;
+    &:first-child{ border: none; }
+  }
+  
+  a{
+    display: block;
+    height: 5.5em;
+    text-align: center;
+    color: $gray-shine;
+    font: 0.75em/5.5em $sans;
+    &:hover{
+      color: $white-off;
+    }
+  }
+}
+
+// HOVER SLIDE EFFECT
+.list-hover-slide{
+  
+  li{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  a{
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: .35s ease color;
+    
+    &:before{
+      content: '';
+      display: block;
+      z-index: -1;
+      position: absolute;
+      left: -100%; top: 0;
+      width: 100%; height: 100%;
+      border-right: solid 5px $orange;
+      background: $gray-shine;
+      transition: .35s ease left;
+    }
+    
+    &.is-current,
+    &:hover{
+      
+      &:before{
+        left: 0;
+      }
+    }
+  }
+}
+--------------------------------------------------------------------------------
+
+<section class="app">
+  <aside class="sidebar">
+         <header>
+        Menu
+      </header>
+    <nav class="sidebar-nav">
+ 
+      <ul>
+        <li>
+          <a href="#"><i class="ion-bag"></i> <span>Shop</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-color-filter-outline"></i>Derps</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-clock-outline"></i>Times</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-android-star-outline"></i>Hates</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-heart-broken"></i>Beat</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-settings"></i> <span class="">Controls</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-alarm-outline"></i>Watch</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-camera-outline"></i>Creeper</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-chatboxes-outline"></i>Hate</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-cog-outline"></i>Grinder</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-briefcase-outline"></i> <span class="">Folio</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-lightbulb-outline"></i>Bulbs</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-location-outline"></i>Where You</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-locked-outline"></i>On Lock</a>
+            </li>
+             <li>
+              <a href="#"><i class="ion-ios-navigate-outline"></i>Ghostface</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-analytics-outline"></i> <span class="">Graphicals</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-timer-outline"></i>Timers</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-arrow-graph-down-left"></i>You Lose</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-partlysunny-outline"></i>Stormy</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-timer-outline"></i>Lookie Look</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-game-controller-a-outline"></i>Dork Mfer</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-paper-outline"></i> <span class="">Papers</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-filing-outline"></i>File Cab</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-information-outline"></i>Infos</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-paperplane-outline"></i>Planes</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-android-star-outline"></i>Shop</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-navigate-outline"></i> <span class="">Ass Finder</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-lightbulb-outline"></i>Bulbs</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-location-outline"></i>Where You</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-locked-outline"></i>On Lock</a>
+            </li>
+             <li>
+              <a href="#"><i class="ion-ios-navigate-outline"></i>Ghostface</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-medical-outline"></i> <span class="">Cocaine</span></a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</section>
+
+@import "bourbon";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+
+body{
+  font-family: "Lato";
+  font-size: 100%; 
+	overflow-y: scroll; 
+ font-family: sans-serif; 
+ -ms-text-size-adjust: 100%; 
+ -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  text-rendering: optimizeLegibility;
+  background-color: #fefefe;
+}
+a{
+  text-decoration: none;
+  @include transition(all 0.6s ease);
+  
+  &:hover{
+     @include transition(all 0.6s ease);
+  }
+}
+
+.app{
+  height: 100vh;
+}
+/* -------------
+Sidebar
+----------------*/
+.sidebar {
+  position: absolute;
+  //width: 33.3333%;
+  width: 17em;
+  height: 100%;
+  top: 0;
+  overflow:hidden;
+  background-color: #19222a;
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  
+  header{
+    background-color: #09f;
+    width: 100%;
+    display:block;
+    padding: 0.75em	1em;
+  }
+}
+
+/* -------------
+Sidebar Nav
+----------------*/
+.sidebar-nav {
+  position: fixed;
+  //width: 13em;
+  background-color: #19222a;
+  height: 100%;
+  font-weight: 400; 
+  font-size: 1.2em;
+  overflow: auto;
+  padding-bottom: 6em;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+ 
+  
+  ul{
+    list-style:none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    
+    li{
+      margin-left: 0;
+      padding-left: 0;
+      //min-width: 13em;
+      display:inline-block;
+      width: 100%;
+      
+      a{
+        color: rgba(255,255,255,0.9);
+        font-size: 0.75em;
+        padding: 1.05em	1em;
+        position: relative;
+        display:block;
+        
+        &:hover{
+          background-color: rgba(0,0,0,0.9);
+          @include transition(all 0.6s ease);
+        }
+      }
+/* -------------
+Sidebar: icons
+----------------*/
+      i{
+        font-size: 1.8em;
+        padding-right: 0.5em;
+        width: 9em;
+        display: inline;
+        vertical-align:middle;
+      }  
+    }
+  }
+
+/* -------------
+Chev elements
+----------------*/ 
+  & > ul > li > a:after {
+    content: '\f125';
+    font-family: ionicons;
+    font-size: 0.5em;
+    width: 10px;
+    color: #fff;
+    position: absolute;
+    right: 0.75em;
+    top: 45%;
+  }
+/* -------------
+Nav-Flyout
+----------------*/
+  & .nav-flyout {
+    position: absolute;
+    background-color: #080D11;
+    z-index: 9;
+    left: 2.5em;
+    top: 0;
+    height: 100vh;
+    @include transform(translateX(100%));
+    @include transition(all 0.5s ease);
+    
+    a:hover{
+      background-color: rgba(255,255,255, 0.05)
+    }
+  }
+
+/* -------------
+Hover
+----------------*/
+  & ul > li:hover{
+      .nav-flyout{
+      @include transform(translateX(0));
+        @include transition(all 0.5s ease);
+    }
+  }
+}

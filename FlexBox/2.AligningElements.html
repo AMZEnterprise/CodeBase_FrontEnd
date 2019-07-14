@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div {
+            padding: 20px;
+        }
+
+        .flex-container {
+            border: 2px solid black;
+            height: 500px;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .flex-item {
+            border: 1px solid red;
+        }
+
+        #item3 {
+            align-self: flex-end;
+        }
+
+
+        #container2 {
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        #container3 div:nth-child(1){
+            order: 3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Flex Container</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <h3>One</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Two</h3>
+        </div>
+        <div class="flex-item" id="item3">
+            <h3>Three</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Four</h3>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1>Flex Container 2</h1>
+    <div class="flex-container" id="container2">
+        <div class="flex-item">
+            <h3>One</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Two</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Three</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Four</h3>
+        </div>
+        <div class="flex-item">
+            <h3>One</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Two</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Three</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Four</h3>
+        </div>
+        <div class="flex-item">
+            <h3>One</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Two</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Three</h3>
+        </div>
+        <div class="flex-item">
+            <h3>Four</h3>
+        </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="flex-container" id="container3">
+            <div class="flex-item">
+                <h3>One</h3>
+            </div>
+            <div class="flex-item">
+                <h3>Two</h3>
+            </div>
+            <div class="flex-item" id="item3">
+                <h3>Three</h3>
+            </div>
+            <div class="flex-item">
+                <h3>Four</h3>
+            </div>
+        </div>
+
+</body>
+
+</html>

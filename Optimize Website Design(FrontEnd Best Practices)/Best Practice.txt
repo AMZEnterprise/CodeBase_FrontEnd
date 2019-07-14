@@ -1,0 +1,50 @@
+1.Responsive web design
+2.Use small sized images and use more svg files than other formats(size is smaller and it is responsive at the same time!)
+3.Don't use inline styles or add styles in .html file - move style to .css files
+4.Don't use scripts in .html files - move scripts to .js files
+5.Web site design must be device-independent
+6.W3C technologies and guidelines must be applied
+7.Navigation must be easy-to-understand
+8.Documents must be clear and simple
+9.All web pages (not only the home page) must have descriptive titles provided by the title element
+10.Links to all other pages of the site must be available directly or indirectly from the home page
+11.Breadcrumb trails may be applied to help the user visualize content structure, ease navigation, and identify the
+current location within the site structure as well as within the current web page
+12.A logical tab order must be added to web sites that allows the user to easily navigate through links, objects, and
+form controls(Use "tabindex" attribute in html tags and set value from 1 to ...)
+13.A search function is vital for all web sites because it might help users find content
+14.the DOM order must match the visual order( Web page content must be ordered in a meaningful sequence)
+15.A dedicated help page can be used to collect information that can be helpful for less experienced users but omitted
+from the main content, because they are evident (and even disturbing) for most users
+16.Ideally, text is easy to read. Complex text content may be summarized in a form that requires a reading ability less
+advanced than the upper secondary education level( For example, a technical article can be too complex to read for
+some people, and a text summary containing shorter sentences and more common words might be helpful for them)
+17.text lines may not exceed an average of 80 characters even if the browser window is resized
+18.The visual presentation of texts should be controlled with CSS properties such as font-family, font-size, fontstyle,
+font-weight, color, letter-spacing, line-height, text-align, text-transform, and background-image and the :first-line, 
+:first-letter, :before and :after pseudoclasses
+19.A cross-browser color selector solution may be applied that allows users to change the foreground and
+background colors of text sections
+20.screen readers may not automatically read dynamically added content. reading of dynamically added new
+content can be ensured by setting the focus to the new element or adding it below the current location where it will be
+encountered as the user continues browsing
+21.Highly accessible web sites eliminate horizontal scrolling even if the user resizes the browser window
+22.Links must apply the title attribute to provide additional link text
+23.Images must apply the alt attribute.
+24.links should be opened in the same window rather than a new window or tab.
+25.Table captions must be associated with tables by using the caption element. Data cells and header cells must be 
+associated with the id, header, and scope attributes in tables.
+26.Event handlers must be device-independent and allow not only the mouse but also keyboard access to full content
+functionality (for example, drag and drop)
+27.Web servers that require user authentication often terminate sessions for security reasons after a certain period
+of time spent without user activity. If the user cannot provide the input quickly enough, the session times out before
+data submission, and reauthentication is required. Servers should store such data in a temporary cache and retain
+them after a successful user reauthentication, so the user can continue filling in the form rather than starting it all over
+again, because all previously entered data is restored.Automatic redirections should be eliminated whenever possible. Both client-side (meta refresh) and server-side
+(HTTP response) redirections have accessibility issues that can confuse users.
+28.Form components, links, and all elements with a tabindex attribute greater than 0 can receive focus. However,
+the default focus indicator of some platforms is not highly visible and may be difficult to see against certain
+backgrounds. The visibility of focus indicators should always be ensured.
+29.Time-based media such as presentations must always have an alternate textual version or description.
+30.Moving and scrolling texts must also be available in a static page section or window.
+

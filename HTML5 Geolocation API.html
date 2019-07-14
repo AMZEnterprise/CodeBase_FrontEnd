@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Geolocation API</title>
+</head>
+
+<body>
+    <div id="map">
+    </div>
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAlJFc1lrstqhgTl3ZYo38bBQcfCcww1WgMTxEFsdaTsnOXOVOUhTplLhHcmgnaY0u87hQyd-n-kiOqQ">
+    </script>
+    <script>
+        (function () {
+            google.load("maps", "2");
+            google.setOnLoadCallback(function () {
+                var map = new google.maps.Map2(document.getElementById("map")),
+                    markerText = "<h2>You are here</h2><p>This is your current position</p>",
+                    markOutLocation = function (lat, long) {
+                        var latLong = new google.maps.LatLng(lat, long),
+                            marker = new google.maps.Marker(latLong);
+                        map.setCenter(latLong, 15);
+                        map.addOverlay(marker);
+                        marker.openInfoWindow(markerText);
+                        google.maps.Event.addListener(marker, "click", function () {
+                            marker.openInfoWindow(markerText);
+                        });
+                    };
+                map.setUIToDefault();
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        markOutLocation(position.coords.latitude, position.coords.longitude);
+                    },
+                        function () {
+                            markerText = "<p>You should accept the Geolocation request, otherwise your position cannot be determined.</p > ";
+                            markOutLocation(59.3325215, 18.0643818); // Garden Island, Port Adelaide, Australia
+                        });
+                }
+                else {
+                    markerText = "<p>Geolocation is not supported. Welcome to my favourite location.</p>";
+                    markOutLocation(-34.928621, 138.599959); // Rundle Mall, Adelaide, Australia
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

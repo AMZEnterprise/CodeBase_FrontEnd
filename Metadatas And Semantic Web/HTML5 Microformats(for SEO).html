@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Microformats(for SEO)</title>
+</head>
+
+<body>
+
+    <!--
+        Microfomats : some stuctures like meta tags used by search engines.
+
+        note : use websites to generate these codes online!
+    -->
+
+
+
+
+    <!-- 
+        hCalendar :
+
+        hCalendar microformat to create calendar entries for sport events, anniversaries, reminders, 
+        meetings, workshops, conferences, and other events
+    -->
+    <div class="vevent">
+        <h1 class="summary">Semantic Web Conference ’15</h1>
+        <div class="description">Semantic Web Conference 2015 was announced yesterday.</div>
+        <div>Posted on: <abbr class="dtstamp" title="20150825T080000Z">Aug 25, 2015</abbr></div>
+        <div class="uid">uid1@host.com</div>
+        <div>Organized by: <a class="organizer" href="mailto:js@expl.com">js@expl.com</a></div>
+        <div>Dates: <abbr class="dtstart" title="20151012T093000Z">October 12 2015, 9.30am
+                UTC</abbr> – <abbr class="dtend" title="20151014T200000Z">October 14 2015, 8.00pm
+                UTC</abbr></div>
+        <div>Status: <span class="status">Confirmed</span></div>
+        <div>Filed under:</div>
+        <ul>
+            <li class="category">Conference</li>
+        </ul>
+    </div>
+
+
+    <!--
+        hCard : 
+
+        hCard microformat standard can be used to represent contact data of people, companies, and organizations
+        by semantic markup
+    -->
+
+    <div id="hcard-John-Smith" class="vcard">
+        <img src="http://www.example.com/jsmith.jpg" alt="Photo of John Smith" class="photo" />
+        <a class="url fn" href="http://www.example.com">John Smith</a>
+        <div class="org">Smith and Sons</div>
+        <a class="email" href="mailto:smith@example.com">smith@example.com</a>
+        <div class="adr">
+            <div class="street-address">123 Nice Street</div>
+            <span class="locality">Vancouver</span>,
+            <span class="region">BC</span>,
+            <span class="postal-code">V5K</span>
+            <span class="country-name">Canada</span>
+        </div>
+        <div class="tel">+12345678</div>
+    </div>
+
+
+    <!--
+        also there are other microformats :
+        XFN , Rel attributes for links and images , XMDP , ... 
+    -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+Set the Viewport in html :
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+Conditional Styling with CSS3 Media Queries:
+ex:
+@media screen and (min-width: 480px) {
+    .content {
+    float: left;
+    }
+    ...
+}
+
+
+
+Responsive Images:
+ex:
+<img src="ferrari-400.jpg" alt="The Ferrari" sizes="(min-width: 600px) 60vw, 100vw"
+srcset="ferrari-200.jpg 200w,ferrari-400.jpg 400w,ferrari-800.jpg 800w,ferrari-1200.jpg 1200w">
+
+to use same image:
+img {
+max-width: 100%;
+}
+
+Cropped Image Version for Low-Resolution Displays, Full Version for High-Resolution Screens:
+<picture>
+    <source media="(min-width: 960px)" srcset="bridge-full.jpg">
+    <img src="bridge-closeup.jpg" alt="The Sydney Harbour Bridge">
+</picture>
+
+
+
+

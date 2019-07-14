@@ -1,0 +1,12 @@
+We most design URIs(or URLs) in the way that they most not change during years!
+Carefully selected directory names are logical and seldom should be changed in the
+references in the markup.
+Directory names that indicate software mechanisms such as cgi-bin should also be eliminated from URIs.
+They might change. Topic names, company sections, access levels, or security levels are also inappropriate for URIs
+Remove file extenstions from the URLs and use "Content negotiation" instead.
+
+ex : use the name script or scripts for the directory where you store the script files of a web site instead of php or
+javascript, because if you adopt further scripting languages later, the uris in the files of the site will reflect a specific
+language rather than a common name. Similarly, the directory name style or styles is more practical than css or xsl,
+and the name news or feed is more fortunate than rss or atom. the name images is better than jpg, and a doc or docs
+directory can hold a variety of documents from pdf to Word documents, not just a certain type.

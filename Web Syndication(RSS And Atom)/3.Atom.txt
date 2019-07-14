@@ -1,0 +1,46 @@
+Atom : The Atom news feed specification consists of two standards: the Atom Syndication Format and the Atom Publishing
+Protocol (AtomPub or APP)
+
+
+
+General Structure of an Atom File:
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>An Atom news feed example</title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/" />
+    <link rel="self" type="application/atom+xml" href="http://www.example.com/News/atom.xml" />
+    <id>tag:www.example.com,2008-09-29://4</id>
+    <updated>2011-08-08T08:03:00Z</updated>
+    <entry>
+        <title>News item 2</title>
+        <link rel="alternate" type="text/html" href="http://www.expl.com/2011.html#entry-9167" />
+        <id>tag:www.expl.com,2011://4.9167</id>
+        <published>2011-08-08T08:03:00Z</published>
+        <updated>2011-08-08T08:03:00Z</updated>
+        <summary>Summary of news entry 2</summary>
+        <author>
+            <name>John Smith</name>
+        </author>
+        <category term="Home Page Stories" />
+        <category term="Web of Services" />
+        <content type="html" xml:lang="en" xml:base="http://www.example.com/">The full content of News #2.</content>
+    </entry>
+    <entry>
+        <title>News item 1</title>
+        <link rel="alternate" type="text/html" href="http://www.example.com/news/#entry-9165" />
+        <id>tag:www.example.com,2011://4.9165</id>
+        <published>2011-08-07T08:48:00Z</published>
+        <updated>2011-08-07T08:48:00Z</updated>
+        <summary>Summary of news entry 1</summary>
+        <author>
+            <name>John Smith</name>
+        </author>
+        <category term="Publication" />
+        <category term="Web design" />
+        <category term="Press releases" />
+        <content type="html" xml:lang="en" xml:base="http://www.example.com/">
+            <![CDATA[ The full content of News #1. In CDATA sections, 
+            <a href="http://example.com/markup/">markup code</a> can also be included. ]]>
+        </content>
+    </entry>
+</feed>

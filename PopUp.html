@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PopUp</title>
+    <style>
+        .popupBtn {
+            position: relative;
+            display: inline-block;
+            background-color: rebeccapurple;
+            padding: 20px;
+            border: none;
+            color: white;
+            cursor: default;
+        }
+        .popupBtn:hover .popup{
+            visibility: visible;
+            opacity: 1;
+        }
+        .popup{
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 45px;
+            left: 0;
+            background-color: red;
+            padding-top: 30px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .popup::before{
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            content: "";
+            width: 20px;
+            height: 30px;
+            transform: rotate(45deg);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="popupBtn">
+        <span>Hover Me</span>
+        <div class="popup">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, placeat! Nulla beatae veniam sint impedit
+            dolore distinctio assumenda
+            totam doloremque deleniti, id nemo ipsum expedita iusto blanditiis reprehenderit aperiam? Nemo?
+        </div>
+    </button>
+
+</body>
+
+</html>

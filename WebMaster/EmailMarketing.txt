@@ -1,0 +1,31 @@
+Email marketing
+
+
+Bounuce rate : close website/email quickly without staying there/clicking links 
+, it should be lower than 40%.
+
+Email read rate : perecntage of people who read the email
+
+Unsubscribe : a feature that can cancel reciving more emails.
+
+Broadcast eamil : general email sent to people , like ads for a good
+
+Spam : emails that are not useful or contain malwares , ...
+
+Click rate : perecntage of people cliked link in a email
+
+
+
+We need an email list for email marketing , get them through subscription
+forms in our website.
+
+
+
+
+websites :
+
+www.spamahaus.org
+www.mailerlite.com
+www.mailchimp.com
+www.mailchi.in
+www.mailster.co

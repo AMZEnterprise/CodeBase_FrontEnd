@@ -1,0 +1,16 @@
+You should have noticed that there are similar concepts defined by certain microformats and HTML5 microdata to
+describe people, events, or licenses. RDFa, on the other hand, is not limited to such concepts and can be used to
+annotate any kind of resource.
+As discussed earlier, microformats reuse HTML attributes (for example, class, title) and have separate
+vocabularies that are difficult to combine, because microformats do not use the namespace mechanism. Last but not
+least, microformats do not define an RDF representation.
+HTML5 microdata, as also presented earlier, provides new attributes for HTML5 markup. HTML5 microdata is
+easy to write and works well in documents that use a single external vocabulary. Combining different vocabularies
+is rather complex in HTML5 microdata. Some vocabulary mappings, such as that of Dublin Core elements, are
+supported by the technology by default. A missing feature is the concept of data types and namespaces. Fortunately,
+however, HTML5 microdata defines a generic mapping to RDF, so it can be used to express triples.
+
+In contrast to microformats and microdata, RDFa is a complete serialization of RDF and hence provides the most
+advanced annotation of them all. RDFa defines new markup attributes and uses URIs and namespaces by default.
+Consequently, combining vocabularies is very easy (similar to RDF). RDFa is completely flexible regarding literals and
+URI resources

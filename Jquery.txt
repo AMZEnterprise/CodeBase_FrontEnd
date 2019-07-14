@@ -1,0 +1,163 @@
+================================== Selectors ==================================
+// Select element by identifier
+$("#ElementID").something();
+
+// Select element by CSS class
+$(".ClassName").something();
+
+// Select elements that have an identifier with a string
+$("[id*='value']").something();
+
+// Select elements that have an identifier that begins with a string
+$("[id^='value']").something();
+
+// Select elements that have an identifier ending with a string
+$("[id$='value']").something();
+
+// Select elements of a particular type
+$("div").something();
+
+
+================================== Toggle Show and Hide ==================================
+// Toggle hide/show of an element
+$("#DivID").toggle(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").toggle(1000, function () {
+alert("Toggle Complete");
+});
+
+// Hide an element
+$("#DivID").hide(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").hide(1000, function () {
+alert("Hide Complete");
+});
+
+// Show an element
+$("#DivID").show(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").show(1000, function () {
+alert("Show Complete");
+});
+
+
+================================== Slide Functions ================================== 
+// Toggle slide up and down
+$("#DivID").slideToggle(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").slideToggle(1000, function () {
+alert("Slide Toggle Complete");
+});
+
+// Slide up
+$("#DivID").slideUp(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").slideUp(1000, function () {
+alert("Slide Up Complete");
+});
+
+// Slide down
+$("#DivID").slideDown(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").slideDown(1000, function () {
+alert("Slide Down Complete");
+});
+
+
+================================== Fade Functions ================================== 
+// Fade in
+$("#DivID").fadeIn(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").fadeIn(1000, function () {
+alert("Fade In Complete");
+});
+
+// Fade out
+$("#DivID").fadeOut(1000);
+
+// Perform an action after the animation is completed
+$("#DivID").fadeOut(1000, function () {
+alert("Fade Out Complete");
+});
+
+// Fade to (fades to specified opacity)
+$("#DivID").fadeTo(1000, 0.25);
+
+// Perform an action after the animation is completed
+$("#DivID").fadeTo(1000, 0.25, function () {
+alert("Fade To Complete");
+});
+
+
+================================== Animation Functions ================================== 
+$("#DivID").animate({ opacity: 0.75 }, 1000);
+
+// Perform an action after the animation is completed
+$("#DivID").animate({ opacity: 0.75 }, 1000, function () {
+alert("Opacity Animation Complete");
+});
+
+
+================================== Set and Retrieve Input Values ==================================
+// Get the value of a textbox
+var TextboxValue = $("#TextboxID").val();
+
+// Set the value of a textbox
+$("#TextboxID").val("New Textbox Value");
+
+
+================================== Set and Retrieve Element Markup Content ==================================
+// Get the markup content of an element
+var DivHTML = $("#DivID").html();
+
+// Set markup content
+$("#DivID").html("<p>The updated markup content.</p>");
+
+
+================================== Set and Retrieve Element Text ==================================
+// Retrieve the textual content of an element
+var DivText = $("#DivID").text();
+
+// Set the textual content of element
+$("#DivID").text("The new textual content.");
+
+
+================================== Set and Retrieve Element Dimensions ================================== 
+// Get element height
+var ElementHeight = $("#DivID").height();
+
+// Set element height
+$("#DivID").height(300);
+
+// Get element width
+var ElementWidth = $("#DivID").width();
+
+// Set element width
+$("#DivID").width(400);
+
+
+================================== Handling CSS Classes ==================================
+// Create a CSS class
+$("#DivID").addClass("newclassname");
+
+// Remove a CSS class
+$("#DivID").removeClass("classname");
+
+// Create a new class and remove the old one
+$("#DivID").removeClass("classname").addClass("newclassname");
+
+// Create and remove multiple classes
+$("#DivID").removeClass("classname classname2").addClass("newclassname newclassname2");
+
+
+================================== Change CSS Properties ==================================
+$("#DivID").css("border", "solid 1px #00f");
+
+

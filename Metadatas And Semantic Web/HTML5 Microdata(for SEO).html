@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Microdata</title>
+
+</head>
+
+<body>
+
+    <!--
+        Microdata: they are just like microformats and used to provide information about web doecument content.
+
+    -->
+
+
+
+    <!-- People -->
+    <div itemscope itemtype="http://data-vocabulary.org/Person">
+        <span itemprop="name">Leslie Sikos</span> is the
+        <span itemprop="title">manager</span> of
+        <span itemprop="affiliation">Sikos Web Consulting</span>.
+    </div>
+
+
+    <!-- Events -->
+    <div>
+        <a href="http://www.example.com/news.htm">National flyball competition</a>
+        <img src="flyball.jpg" alt="Flyball" />
+        The national flyball competition is approaching.
+        When: Nov 13, 9:00AM—12:00AM
+        Where: Dog Park, 123 Arena Eve, Melbourne, VIC
+        Category: Sport
+    </div>
+
+
+    <!-- Image Licensing with Microdata : It is strongly recommended you publish photographs on the Web with licensing metadata -->
+    <figure itemscope itemtype="http://example.org/pics" itemref="licenses">
+        <img itemprop="name" src="images/amdb9.jpg" alt="My Aston Martin DB9.">
+        <figcaption itemprop="title">The DB9.</figcaption>
+    </figure>
+    <footer>
+        <p id="licenses">All images are licensed under the <a itemprop="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            Creative Commons Attribution Share Alike license</a>.
+        </p>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>

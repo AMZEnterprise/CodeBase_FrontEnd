@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        <a href="javascript:replace()">Click here to fetch text!</a>
+    </p>
+
+    <div id="repdiv">
+        Text will comes here...
+    </div>
+
+    <script>
+        var http = false;
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            http = new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            http = new XMLHttpRequest();
+        }
+
+        function replace(){
+            http.open("GET","data.txt",true);
+            http.onreadystatechange = function(){
+                if(http.readystate == 4){
+                    document.getElementById("repdiv").innerHTML = HTMLAppletElement.responseText;
+                }
+            }
+            http.send(null);
+        }
+
+    </script>
+</body>
+
+</html>

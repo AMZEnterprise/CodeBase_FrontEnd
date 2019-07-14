@@ -1,0 +1,71 @@
+Really Simple Syndication (RSS) is the most widely used web syndication format. Since RSS is an XML application, it
+can be extended through XML namespaces. Beyond its conventional use of representing news and press releases, RSS
+also has special applications such as providing up-to-date exchange rates for banks.
+
+note : there are lots of elements avaiable , so search the web.
+
+Gneral Structure of an RSS File with Maximized Interoperability:
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>An RSS news feed example</title>
+		<link>http://www.example.com</link>
+		<pubDate>Mon, 08 Aug 2011 08:03:00 +0200</pubDate>
+		<image>
+			<url>http://www.example.com/images/logo.png</url>
+			<title>An RSS news feed example</title>
+			<link>http://www.example.com</link>
+		</image>
+		<dc:creator>John Smith</dc:creator>
+		<description>The news feed of rock star John Smith. Concerts, CDs, and more.</description>
+		<language>en</language>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<atom:link href="http://www.example.com/rss.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>News item 2</title>
+			<link>http://www.news2link.com</link>
+			<pubDate>Mon, 08 Aug 2011 08:03:00 +0200</pubDate>
+			<dc:creator>John Smith</dc:creator>
+			<category>CDs</category>
+			<guid>http://www.news2link.com</guid>
+			<description>Description of news item 2</description>
+			<content:encoded>The full content of News #2.</content:encoded>
+		</item>
+		<item>
+			<title>News item 1</title>
+			<link>http://www.news1link.com</link>
+			<pubDate>Sun, 07 Aug 2011 08:48:00 +0200</pubDate>
+			<dc:creator>John Smith</dc:creator>
+			<category>Concerts</category>
+			<guid>http://www.news1link.com</guid>
+			<description>A bit more about news 1</description>
+			<content:encoded><![CDATA[ The full content of News #1. In CDATA sections, 
+			<a href="http://examp.com">markup code</a> can also be included. ]]></content:encoded>
+		</item>
+		</channel>
+</rss>
+
+
+
+Using a CSS File for Styling RSS:
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href="css/feed.css" ?>
+<rss version="2.0">
+
+//css here
+channel title {
+font-size: 1.4em;
+}
+rss {
+font-family: Verdana, Helvetica, sans-serif;
+}
+
+
+
+Using XSLT for Styling RSS:
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="css/feed.xsl" ?>
+<rss version="2.0">
+
+

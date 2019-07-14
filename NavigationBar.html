@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar {
+            background-color: rgb(51, 50, 50);
+            padding: 0;
+            margin: 0;
+        }
+
+        .navitem {
+            display: inline-block;
+        }
+
+        .navlink {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navlink:hover {
+            background-color: rgb(99, 53, 53);
+        }
+
+        .navdrop {
+            display: inline-block;
+            position: relative;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .navdrop:hover .droplist {
+            max-height: 1000px;
+            visibility: visible !important;
+        }
+
+        .navdroplink {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navdroplink:hover {
+            background-color: rgb(99, 53, 53);
+        }
+
+        .droplist {
+            padding: 0;
+            margin: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            min-width: 100px;
+            background-color: rgb(51, 50, 50);
+            list-style-type: none;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            max-height: 0;
+        }
+
+        .dropitem {
+            width: 100%;
+        }
+
+        .droplink {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .droplink:hover {
+            background-color: rgb(99, 53, 53);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="navbar">
+        <li class="navitem">
+            <a href="#" class="navlink">Link 1</a>
+        </li>
+        <li class="navitem">
+            <a href="#" class="navlink">Link 2</a>
+        </li>
+        <li class="navdrop">
+            <a href="#" class="navdroplink">
+                Dropdown
+            </a>
+            <ul class="droplist">
+                <li class="dropitem">
+                    <a href="#" class="droplink">Link1</a>
+                </li>
+                <li class="dropitem">
+                    <a href="#" class="droplink">Link1</a>
+                </li>
+                <li class="dropitem">
+                    <a href="#" class="droplink">Link3</a>
+                </li>
+                <li class="dropitem">
+                    <a href="#" class="droplink">Link4</a>
+                </li>
+                <li class="dropitem">
+                    <a href="#" class="droplink">Link5</a>
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+RDF Schema :
+RDF Schema extends RDF with structure (classes, properties of properties,
+and so on). It can be used to formalize metadata exchange between human-readable and machine-processable
+vocabularies.
+
+
+A Simple RDFS Example :
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.example.com/birds#">
+	<rdf:Description rdf:ID="bird">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	</rdf:Description>
+	<rdf:Description rdf:ID="macaw">
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<rdfs:subClassOf rdf:resource="#bird"/>
+	</rdf:Description>
+</rdf:RDF>
+
+
+An Optimized Version of the Previous Example:
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.example.com/birds#">
+	<rdfs:Class rdf:ID="bird" />
+		<rdfs:Class rdf:ID="macaw">
+		<rdfs:subClassOf rdf:resource="#bird"/>
+	</rdfs:Class>
+</rdf:RDF>

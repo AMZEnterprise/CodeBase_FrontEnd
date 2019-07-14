@@ -1,0 +1,14 @@
+in <script></script> or <style></style> tags in XML/XHTML document we must have <![CDATA[]]> this and then write scripts or code
+between [].
+
+ex : 
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG August 1999//EN" "http://www.w3.org/Graphics/SVG/SVG-19990812.dtd">
+<svg>
+	<defs>
+		<style>
+			<![CDATA[ main { font-size: 14px; font-family: Georgia, serif; } ]]>
+		</style>
+	</defs>
+	<text class="main">Here is my title</text>
+</svg>

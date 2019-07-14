@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="files/jquery-3.3.1.min.js"></script>
+    <style>
+        body{
+            background: rgb(54, 52, 52);
+            color: white;
+        }
+        #search{
+            width:100%;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+        
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+            background-color: rgb(63, 62, 62);
+        }
+        table td{
+            border-bottom: 2px solid rgb(132, 0, 255);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="search" placeholder="Search ...">
+    <table id="Table">
+        <tr>
+            <td>1</td>
+            <td>Ali</td>
+            <td>Momenzadeh</td>
+            <td>09135101092</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mahdi</td>
+            <td>Mohammadi</td>
+            <td>09135408098</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hasan</td>
+            <td>Moradi</td>
+            <td>09218523549</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ehsan</td>
+            <td>Jafari</td>
+            <td>09120589752</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Mahdi</td>
+            <td>Rahimi</td>
+            <td>09105487896</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Afshin</td>
+            <td>Moradi</td>
+            <td>09140580800</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Ali</td>
+            <td>Bagheri</td>
+            <td>09135468957</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Shahin</td>
+            <td>Ebrahimi</td>
+            <td>09210587896</td>
+        </tr>
+    </table>
+
+    <script>
+        $(function () {
+
+            let input;
+            let Table = $("#Table");
+            let TableTr = $("#Table").children().children();
+            $("#search").keyup(function () {
+                input = $("#search").val().trim().toLowerCase();
+                $("#Table").children().children().eq(1).hide();
+                let TableTd;
+                Table.filter(function () {
+                    for (let i = 0; i < TableTr.length; i++) {
+                        TableTd = TableTr[i].children;
+                        if (TableTd[0].textContent.toLowerCase().indexOf(input) > -1 || TableTd[1].textContent.toLowerCase().indexOf(input) > -1 || TableTd[2].textContent.toLowerCase().indexOf(input) > -1 || TableTd[3].textContent.toLowerCase().indexOf(input) > -1) {
+                            Table.children().children().eq(i).show();
+                        } else {
+                            Table.children().children().eq(i).hide();
+                        }
+                    }
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>

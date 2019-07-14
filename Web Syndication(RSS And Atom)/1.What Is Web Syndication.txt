@@ -1,0 +1,5 @@
+The amount of up-to-date information shared on the Internet is constantly growing. Web syndication provides news
+feed channels in order to publish a summary of recently updated web site contents, latest news, or forum posts. These
+web feeds make it possible for users to stay informed without browsing web sites. Moreover, the same feed can also be
+shared among multiple web sites. Although the two popular web syndication formats, RSS and Atom, have relatively
+easy vocabularies, news feed channels are desired to conform to strict standards, first of all XML.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overlay Picture</title>
+    <style>
+        .overlayDiv {
+            width: 500px;
+            height: 400px;
+            position: relative;
+            display: block;
+            cursor: pointer;
+        }
+
+        .overlayDiv:hover .overlayContent {
+            opacity: 1;
+            height: 100%;
+            /* width: 100%; */
+        }
+
+        .overlayContent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            background-color: rgba(153, 0, 255, 0.651);
+            /* width: 0;  */
+            height: 0;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.2s ease-in;
+        }
+
+        .overlayDiv img {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlayDiv">
+        <div class="overlayContent">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius beatae consectetur modi
+                provident illo nesciunt soluta cumque nihil aperiam eligendi.
+                Fuga eum culpa ex aliquid, modi hic veritatis tenetur veniam.
+            </p>
+        </div>
+        <img src="picture.jpg" alt="">
+    </div>
+</body>
+
+</html>

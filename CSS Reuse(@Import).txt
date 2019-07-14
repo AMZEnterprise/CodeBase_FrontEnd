@@ -1,0 +1,5 @@
+@import ("The file you want.css");
+
+it will import css from other file!
+save main css styles in main.css file then import it to all css files and then
+write custom css codes for each file.

@@ -1,0 +1,92 @@
+Resource Description Framework (RDF):
+Although it was originally designed as a metadata data model, Resource Description Framework (RDF) has become a
+general web resource description and modeling language. It can be used for conceptual description or modeling of
+information stored in web resources.The RDF data model can be used for describing any kind of resources that can 
+be identified by a URI.
+
+
+Describing a Person in RDF(use FOAF) :
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns="http://www.example.com/johnsmith/contact.rdf#">
+	<foaf:Person rdf:about="http://www.example.com/johnsmith/contact.rdf#johnsmith">
+		<foaf:mbox rdf:resource="mailto:john.smith@example.com" />
+		<foaf:homepage rdf:resource="http://www.example.com/johnsmith/" />
+		<foaf:family_name>Smith</foaf:family_name>
+		<foaf:givenname>John</foaf:givenname>
+	</foaf:Person>
+</rdf:RDF>
+
+N3 Equivalent of the Previous Example :
+@prefix : <http://www.example.org/~joe/contact.rdf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:joesmith a foaf:Person ;
+	foaf:givenname "Joe" ;
+	foaf:family_name "Smith" ;
+	foaf:homepage <http://www.example.org/~joe/> ;
+	foaf:mbox <mailto:joe.smith@example.org>
+
+
+A Wikipedia Page Described in RDF/XML:
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<rdf:Description rdf:about="http://en.wikipedia.org/wiki/Rowan_Atkinson">
+		<dc:title>Rowan Atkinson</dc:title>
+		<dc:publisher>Wikipedia</dc:publisher>
+	</rdf:Description>
+</rdf:RDF>
+
+
+
+RDF in N3 Syntax:
+Notation 3, often abbreviated as N3, is a shorthand non-XML serialization of RDF. It is a superset of RDF and is more
+compact than the XML serialization of RDF
+
+A Wikipedia Page Description in N3:
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+	<http://en.wikipedia.org/wiki/Rowan_Atkinson>
+	    dc:title "Rowan Atkinson";
+	    dc:publisher "Wikipedia"
+
+
+RDF in Turtle Syntax:
+A subset of N3 is the Terse RDF Triple Language, often referred to as Turtle. Turtle provides a syntax to describe RDF
+graphs in a compact textual form, which is easy to develop. It is a subset of Notation 3 (N3) and a superset of N-Triples
+Turtle is popular among Semantic Web developers and considered as an easy-to-read alternative to RDF/XML.
+
+-----------------------------------------------------------------------------------------------------------
+RDFa : make it possible to ues attributes and embed RRF in to HTML/XHTML files.
+
+Styling RDFa :
+* [property="dc:creator"] {
+	color: #2a56d3;
+	font-style:italic;
+}
+* [property="dc:title"] {
+	font-size: 2em;
+	font-family: Georgia, serif;
+}
+
+
+Two People and the Relationship Between Them Expressed Using FOAF in RDFa :
+<body xmlns:foaf="http://xmlns.com/foaf/0.1">
+	<p>
+		<span about="#john" typeof="foaf:Person" property="foaf:name">John Smith</span> is
+		interested in smartphones. <span about="#jane" typeof="foaf:Person"
+		property="foaf:name">Peter Johnson</span> is an Android developer. 
+		<span about="#john" rel="foaf:knows" resource="#peter">John and Peter knows each other.</span>
+	</p>
+</body>
+
+
+An RDFa Annotation Using DC(Dublin Core metadate):
+<p xmlns:dc="http://purl.org/dc/elements/1.1/" about="#standardweb" property="dc:title">
+	Web standardista <span about="#sikos" property="dc:creator">Dr. Sikos</span> describes
+	web standardization, accessibility, and web semantics in the second edition of
+	<cite about="#webstandards" property="dc:title">Web Standards</cite>. The first blog
+	post has been published on <span about="#webstandards" property="dc:date"
+	content="2014-10-11">11 October 2014</span>.
+</p>
+
+
+
+
+

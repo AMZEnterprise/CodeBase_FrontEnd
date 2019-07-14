@@ -1,0 +1,148 @@
+Web Ontology Language (OWL):
+Web Ontology Language is a knowledge representation language with the primary purpose of creating web ontologies.
+Web ontologies can be used for a variety of purposes, such as searching, query formation, indexing, and agent or
+service metadata management, or to improve application and database interoperability. Web ontologies are especially
+useful for knowledge-intensive applications, where text extraction, decision support, or resource planning are
+common tasks, as well as in knowledge repositories used for knowledge acquisition.
+The abbreviation of the Web Ontology Language, OWL, is not straightforward on purpose. OWL ontologies
+are RDF graphs, in other words, sets of RDF triples. Similar to RDF graphs, OWL ontology graphs can be expressed
+in various syntactic notations. There are three variants of OWL: OWL Lite, OWL DL, and OWL Full. OWL is a
+higher-level language than RDF; in fact, it is a vocabulary extension of RDF. Consequently, RDF graphs are OWL Full
+ontologies.
+
+
+OWL2 Functional Syntax Example:
+Ontology(<http://example.com/smartphone.owl>
+Declaration( Class( :Smartphone ) )
+)
+
+
+OWL2 XML Syntax Example:
+<Ontology ontologyIRI="http://example.com/smartphone.owl">
+	<Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+	<Declaration>
+		<Class IRI="Smartphone"/>
+	</Declaration>
+</Ontology>
+
+
+RDF/XML Syntax Example:
+<rdf:RDF>
+	<owl:Ontology rdf:about=""/>
+	<owl:Class rdf:about="#Smartphone"/>
+</rdf:RDF>
+
+
+RDF/Turtle Example:
+<http://example.com/smartphone.owl> rdf:type owl:Ontology.
+:Smartphone rdf:type owl:Class
+
+
+Manchester Syntax Example:
+Ontology: <http://example.com/smartphone.owl>
+Class: Smartphone
+
+
+A Property Declaration in OWL:
+<owl:ObjectProperty rdf:ID="hasTouchscreen"/>
+
+
+Two Equivalent Smartphone Properties (Accelerometer and G-sensor):
+<owl:ObjectProperty rdf:ID="hasAccelerometer">
+	<owl:equivalentProperty>
+		<owl:ObjectProperty rdf:ID="hasGsensor"/>
+	</owl:equivalentProperty>
+</owl:ObjectProperty>
+
+
+A Symmetric Property in OWL:
+<owl:SymmetricProperty rdf:ID="hasLiveConnection">
+	<rdfs:domain rdf:resource="#Smartphone"/>
+	<rdfs:range rdf:resource="#Smartphone"/>
+</owl:SymmetricProperty>
+
+
+Property Hierarchy in OWL:
+SubObjectPropertyOf( :hasGeotagging :hasCamera )
+
+
+A Class Identifier in OWL:
+<owl:Class rdf:ID="Handheld"/>
+
+
+Class Instances in OWL:
+<owl:Class>
+	<owl:oneOf rdf:parseType="Collection">
+		<owl:Thing rdf:about="#Touch"/>
+		<owl:Thing rdf:about="#Type"/>
+		<owl:Thing rdf:about="#TouchType"/>
+		<owl:Thing rdf:about="#Business"/>
+	</owl:oneOf>
+</owl:Class>
+
+
+Property Restrictions in OWL:
+<owl:Restriction>
+	<owl:onProperty rdf:resource="hasGPS" />
+	<owl:allValuesFrom rdf:resource="#Smartphone" />
+</owl:Restriction>
+
+
+Intersection in OWL:
+<owl:Class>
+	<owl:intersectionOf rdf:parseType="Brochures">
+		<owl:Class>
+			<owl:oneOf rdf:parseType="Brochures">
+				<owl:Thing rdf:about="#Manual" />
+				<owl:Thing rdf:about="#Guide" />
+				<owl:Thing rdf:about="#Prospectus" />
+			</owl:oneOf>
+		</owl:Class>
+		<owl:Class>
+			<owl:oneOf rdf:parseType="Brochures">
+				<owl:Thing rdf:about="#Specs" />
+				<owl:Thing rdf:about="#Overview" />
+				<owl:Thing rdf:about="#Guide" />
+			</owl:oneOf>
+		</owl:Class>
+	</owl:intersectionOf>
+</owl:Class>
+
+
+Class Hierarchy in OWL:
+SubClassOf( :Slide :Smartphone )
+
+
+Equivalent Classes in OWL:
+EquivalentClasses( :Virtualkeyboard :Softquerty )
+
+
+Class Disjointness in OWL:
+DisjointClasses( :Bar :Slide )
+
+---------------------------------------------------------------------------------
+Simple Knowledge Organization System (SKOS):
+Simple Knowledge Organization System (SKOS) is a W3C recommendation for representing taxonomies, thesauri,
+classification schemes, subject-heading systems, and structured controlled vocabularies. Being one of the most
+frequently implemented Semantic Web standards in industrial applications, SKOS is built upon RDF and RDFS to
+enable easy publication of controlled vocabularies as linked data. RDF provides interoperability, consistency, and
+integrity, and allows knowledge organization systems to be used in distributed, decentralized metadata applications
+where metadata are retrieved from multiple resources.
+The SKOS standard defines the SKOS data model as an OWL Full ontology. The elements of the SKOS data
+model are OWL classes and properties with individual URIs that form the SKOS vocabulary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

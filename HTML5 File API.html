@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 File API</title>
+    <style>
+        #drop{
+            border: 2px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Choose file(s)</h1>
+    <p>
+        <input type="file" id="upload" multiple="multiple">
+    </p>
+    <div id="drop">
+        You can also drag and drop your files here
+    </div>
+    <h1>Retrieved file(s) information : </h1>
+    <ul id="fileList">
+        <li calss="no-items">&lt;no files uploaded yet&gt;</li>
+    </ul>
+
+
+
+    <script>
+        (function () {
+            var filesUpload = document.getElementById("upload"),
+                dropArea = document.getElementById("drop"),
+                fileList = document.getElementById("fileList");
+
+            function fileTransfer(files) {
+                var li, file, fileInfo, fl = files.length;
+                fileList.innerHTML = "";
+                for (var i = 0; i < fl; i++) {
+                    li = document.createElement("li");
+                    file = files[i];
+                    fileInfo = file.name;
+                    fileInfo += " (" + file.type + "), ";
+                    fileInfo += file.size + " bytes";
+                    li.innerHTML = fileInfo;
+                    fileList.appendChild(li);
+                };
+            };
+
+            filesUpload.onchange = function () {
+                fileTransfer(this.files);
+            };
+
+            dropArea.ondragenter = function () {
+                return false;
+            };
+
+            dropArea.ondragover = function () {
+                return false;
+            };
+
+            dropArea.ondrag = function (e) {
+                fileTransfer(e.dataTransfer.files);
+                return false;
+            }
+
+
+        })();
+
+
+    </script>
+</body>
+
+</html>

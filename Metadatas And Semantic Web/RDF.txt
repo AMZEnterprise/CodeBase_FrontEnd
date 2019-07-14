@@ -1,0 +1,13 @@
+RDF(Resource Description Framework) is a data representation model, not a language like XML.
+On the Semantic Web, there is a variety of structured data, usually expressed in, or based on, the Resource
+Description Framework (RDF).
+
+Similar to conventional conceptual modeling
+approaches, such as class diagrams and entity relationships, the RDF data model is based on statements that
+describe and feature resources, especially web resources, in the form of subject-predicate-object expressions. The
+subject corresponds to the resource. The predicate expresses a relationship between the subject and the object. Such
+expressions are called triples.
+For example, the statement “The grass is green” can be expressed in an RDF triple as follows:
+ •  Subject: “The grass”
+ •  Predicate: “is”
+ •  Object: “green”

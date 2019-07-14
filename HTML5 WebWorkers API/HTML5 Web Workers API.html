@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Web Workers API</title>
+</head>
+
+<body>
+    <h1>Web Workers API enable threading in javascript for background procceses!</h1>
+    <hr>
+
+    <h1>Start/Stop the Worker</h1>
+    <p>
+        <input id="start" type="button" value="Start">
+        <input id="stop" type="button" value="Stop">
+    </p>
+    <h1>The results</h1>
+    <p id="result">Click Start to start the Worker</p>
+    <script src="webworker.js"></script>
+    <script>
+        (function () {
+            function createWorker() {
+                worker = new Worker("webworker.js");
+            }
+            document.getElementById("start").onclick = function () {
+                createWorker();
+                worker.postMessage(0); // initial value
+                worker.onmessage = function (evt) {
+                    document.getElementById("result").innerHTML = evt.data;
+                };
+                worker.onerror = function (evt) {
+                    document.getElementById("result").innerHTML = "Error";
+                };
+            };
+            document.getElementById("stop").onclick = function () {
+                if (worker) {
+                    worker.terminate();
+                }
+            };
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Drag And Drop API</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        #leftDiv,
+        #rightDiv {
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            background-color: #bbdeee;
+            border: 1px solid #000;
+        }
+
+        .word {
+            width: 60px;
+            height: 20px;
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #ff6;
+            display: inline-block;
+            cursor: move;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <header>
+            <h3>Drag the word “DnD” to the other box and back</h3>
+        </header>
+        <div id="leftDiv" ondragover="dragOver(event)" ondrop="dragDrop(event)">
+            <div id="word1" class="dragbox" draggable="true" ondragstart="returndragDefine(event)" ondragend="dragEnd(event)">My</div>
+            <div id="word2" class="dragbox" draggable="true" ondragstart="returndragDefine(event)" ondragend="dragEnd(event)">dog</div>
+            <div id="word3" class="dragbox" draggable="true" ondragstart="returndragDefine(event)" ondragend="dragEnd(event)">is</div>
+            <div id="word4" class="dragbox" draggable="true" ondragstart="returndragDefine(event)" ondragend="dragEnd(event)">called</div>
+            <div id="word5" class="dragbox" draggable="true" ondragstart="returndragDefine(event)" ondragend="dragEnd(event)">Bobby</div>
+        </div>
+        <div id="rightDiv" ondragover="return dragOver(event)" ondrop="dragDropped(event)"></div>
+    </section>
+
+
+    <script>
+        function dragStarted(evt) {
+            evt.dataTransfer.effectAllowed = 'move';
+            evt.dataTransfer.setData("text/plain", evt.target.getAttribute('id'));
+            evt.dataTransfer.setDragImage(evt.target, 0, 0);
+            return true;
+        }
+        function dragOver(evt) {
+            evt.preventDefault();
+        }
+        function dragEnded(evt) {
+            return true;
+        }
+        function dragDropped(evt) {
+            var idDrag = evt.dataTransfer.getData("Text");
+            evt.target.appendChild(document.getElementById(idDrag));
+            evt.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+Font : there are different formats as "EOT" , "TT" , "OT" and "WOFF". Woff fonts are the best and cross browser supported.
+
+Using Fonts Stored in Different Formats:
+@font-face {
+font-family: "Csuff";
+src: url("http://example.com/fonts/csuff.ttf");
+src: url("http://example.com/fonts/csuff.eot");
+}
+
+Applying font to elements:
+p {
+font-family: "Csuff", "Helvetica", sans-serif;
+}
+
+
+
+Multiple Declarations for the Same Typeface:
+@font-face {
+font-family: Calluna;
+src: url('fonts/Calluna-Regular.otf');
+}
+@font-face {
+font-family: Callunab;
+src: url('fonts/Calluna-Bold.otf');
+}
+@font-face {
+font-family: Callunai;
+src: url('fonts/Calluna-It.otf');
+}
+body {
+font-family: "Calluna", "Helvetica", serif;
+}
+h1, h2, h3, strong {
+font-family: "Callunab";
+}
+em {
+font-family: "Callunai";
+}
+
+
+
+
+
+

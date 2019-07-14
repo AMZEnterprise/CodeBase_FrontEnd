@@ -1,0 +1,52 @@
+SEO : Search Engine Optimizition
+
+Our websites should be SEO friendly.
+
+* Use html tags in right places.for example the main title of website
+should be a "br" and "H1" not a div.
+* Don't use more than one "H1" in a page.
+* Use meta and title tags effectively
+* Metas are important (description, keyword, )
+* Page title and headings must the same as the content of that page
+* Navigation bar must be effective , simple , user friendly
+* Img optimizition : prictures should be small in size(use tinypng.com for this)
+ ,use alt attribute for img tags
+* Website template must be responsive for mobiles , tablets , etc
+* Don't use ajax/javascript a lot in a page(don't use ajax to load whole page content).
+* Website template codes should be valid html , css , ... (ex validator.w3.org)
+.......................................
+* URLs must be user friendly (don't use persian words in urls) and seperate words using "-",
+don't use "_" or etc.
+* Don't use rel = "nofollow" for links or no-index meta for the page.
+* Website should update continousely.
+* Update website continouely with a rule and in a clean manner.
+* Don't copy content.
+* Conent should have lots of words.
+* Don't use iframe in pages.
+* Don't use flash or swf files if possible or use few of them.
+* Don't add unrelated links to your website content.
+* Use "Google webmaster tools" to manage website.
+.......................................
+* Text/Htmls tags = between 15% to 70%
+* Don't have broken links in pages.
+* Use "robots.txt" file in the page main directory to control google robots.
+* Use caching for images to load web pages smoother and more quickly.
+* Minify css and javascript
+* Use fewer files in webdesign to speed up website loading (use pingdom.com to see
+speed results)
+* Website domain name is really important for SEO.
+* Choose a purpose for your website , choose some keywords , then
+use most important parts in your website title , domain name , etc.
+* Search for keyword in google trends.
+* Create a site map and add it to google web master tools (google console).
+.......................................
+Use this websites :
+
+	google page insights
+	gtmetrix.com
+	tinypng.com
+	validator.w3.org
+	pingdom.com
+
+
+

@@ -1,0 +1,75 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+
+        <div id="output"></div>
+        <form action="form.php" method="post" id="myForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="mail">Email:</label>
+                <input type="text" id="mail">
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea name="mytxt" id="msg" cols="10" rows="5"></textarea>
+            </div>
+            <div class="button">
+                <button id="submit" type="submit">Send</button>
+            </div>
+
+        </form>
+
+        <script>
+
+            var out = document.getElementById("output");
+            //document.getElementById("submit").onclick = checkForm;
+
+            document.getElementById("myForm").onsubmit = function(){
+
+                var myName = document.getElementById("name");
+                var myEmail = document.getElementById("mail");
+                var myMsg = document.getElementById("msg");
+                var rmessage="";
+                if(myName.value === ''){
+                    rmessage ="name not filled out<br>";
+                }
+
+                 if(!validateEmail(myEmail.value)){
+                    rmessage = rmessage+  "not valid email<br>";
+                }
+
+                 if(myMsg.value === ''){
+                    rmessage =rmessage+ "message not filled out<br>";
+                }
+
+                if(rmessage.length>0){
+                    out.innerHTML=rmessage;
+                    return false;
+                }else{
+                    return true;
+                }
+                
+                
+            }
+
+            function validateEmail(email) {
+            var myCk = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return myCk.test(email);
+            }
+
+            /*
+            function checkForm(){
+                out.innerHTML = "Form sended!";
+            }
+            */
+        </script>
+    </body>
+</html>

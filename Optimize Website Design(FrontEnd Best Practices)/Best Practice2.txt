@@ -1,0 +1,142 @@
+Appropriately Used Elements :
+•	 Tables for tabular data
+•	 Floating elements instead of tables for positioned components (very bad practice)
+•	 Headers instead of general paragraphs
+•	 Paragraphs instead of separate lines with break rows (very bad practice)
+•	 Paragraphs for text paragraphs instead of divisions
+•	 Definition lists for terms and their descriptions instead of general paragraphs
+•	 Headers, articles, and sections instead of general div containers (HTML5)
+•	 The audio and video elements instead of general object embeddings (HTML5)
+
+
+
+Mobile-Friendly Layout: In Responsive Web Design, you can create conditional styles with CSS3 to be applied depending on the screen
+resolution. On smartphones, even if the resolution is huge, it is more convenient to have a collapsed, easy-to-tap
+menu than a wide menu on a full-width page. Tablets usually have bigger screens, while desktop monitors are even
+bigger in size, but the resolution of smaller screens is not necessarily smaller than that of big monitors. The best
+practice is to create the core styles for the site, and create conditional style override for the different screen resolution
+ranges using min-width and/or max-width, and a font size proportionally bigger for smaller screens.Mobile First Design means that the core styles
+are designed for mobile devices and the style override adjusts the layout and font size to bigger screens while the standard approach is just
+the opposite.
+
+ex : 
+@media (min-width:320px) {
+	body{
+		background: none;
+	}
+	#content {
+		width: 300px;
+		font-size: 7.2vw;
+	}
+}
+@media (min-width:480px) {
+	#content {
+		width: 460px;
+		font-size: 5.9vw;
+	}
+}
+@media (min-width:1025px) and (max-width: 2560px) {
+	#content {
+		width: 960px;
+		font-size: 3vw;
+	}
+}
+
+
+
+
+Lengths in Relative Units :The relative units of CSS (em and %), which are computed according to a feature of another element, should be used
+for lengths. In Responsive Web Design, the font size is set proportionally to the viewport size, as discussed earlier
+(vw, vh, vmin, vmax).
+The absolute units such as inches, centimeters, points, and pica can be used only if the physical characteristics
+of the target media are known. A typical example is a printing option of a web page where the default output for an
+official document can be in 12pt Times New Roman with 2.5 cm margins on a standard-sized paper, such as the North
+American letter paper (8.5×11?) or standard A4 paper (210×297 mm, ISO 216 international standard).
+
+
+
+
+Combine Units Properly:The em unit can be used in CSS to provide scalable styles. It is a general unit for measuring lengths such as page
+margins or element paddings. It allows developers to specify several CSS properties relative to the current font size.
+Consequently, margins declared in this unit stay in proportion even if the user magnifies the font size.
+To ease the calculation of font sizes expressed in em, user experience expert Richard Rutter introduced a
+technique that applies a font size of 62.5 percent on the body element:
+body {
+	font-size: 62.5%;
+}
+p {
+	font-size: 1.2em; //12px becuase we use a technique 62.5%!
+}
+
+
+
+Rendering in Multiple Browsers: Because of the differences of rendering engines, markup, and style, validity cannot ensure proper rendering under
+different user agents. Consequently, the legibility and functionality of web sites should be checked on all major
+browsers before publishing.
+
+
+Readability Without Styles: An advanced method for testing web sites is to render them with the default style sheet of the browser. Properly
+structured, logically constructed web documents remain legible without the style sheet(s) developed for them. This
+test is also useful for checking content accessibility.
+
+
+
+
+Mobile Web Best Practices:
+
+Limited bandwidth: Techniques such as compression, caching, and minimized data size
+can contribute to a better user experience for 3G and 4G mobile browsing5. Cookies and
+redirections should be eliminated whenever possible
+
+Limited processing capacity: A large DOM, huge background images, a large number of scripts,
+and so on, can increase processing time. As a result, users will have to wait for relatively long
+periods of time, which should be avoided. Simple markup can be provided for mobile devices
+with XHTML Basic. As for styles, CSS has a profile dedicated to mobile devices. Note
+that smartphone processors became very powerful in the early 2010s, featuring multi-core
+architectures with a relatively high clock rate that do not have limited processing capacity
+anymore.
+
+Limited technology support: Do not rely on scripts, embedded objects, cookies, or style sheets.
+Tabular presentation should be minimized. Since mobile browsers usually support a small
+set of file types only, download sections should warn users of files provided in formats poorly
+supported by mobile devices.
+
+Smaller interface: The automatic sign-in feature and unchanged focus on dynamically updated
+pages can make the use of mobile applications more convenient. Preselected default values
+should be provided where possible. Default text entry mode, language, and/or input format
+should be specified. The small screen size should be taken into account for sizing and
+positioning. Absolute units and pixel measures should be eliminated.
+
+Harder navigation: The simpler the top navigation, the easier to use on mobile devices.
+Link targets should be clearly identified. Access keys used for accessibility might also ease
+navigation.
+
+Flexibility: If devices are classified, the user experience can be boosted significantly. Providing
+alternate content for JavaScript is important.
+
+Mobile-specific features: Certain web page components can be exploited more on mobile
+devices than on computers. Telephone numbers, for example, should be provided with a
+direct calling feature. Physical addresses should be easy to forward to the GPS application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
